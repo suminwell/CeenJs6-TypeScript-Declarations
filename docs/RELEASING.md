@@ -64,9 +64,35 @@ when manually running the workflow at the release commit/tag. Set up one of:
    before expiry. Leave `NPM_TRUSTED_PUBLISHER` unset or false.
 
 The first registry publication requires an npm account authorized to claim
-`ceenjs6`. It can be made from an authenticated terminal with
-`npm publish dist/ceenjs6-5.0.0.tgz --access public`, or from Actions with a token.
-Complete any npm login/2FA interaction in the npm UI; do not commit credentials.
+`ceenjs6`. Download the tarball from the checked GitHub Release for this step;
+do not substitute a locally repacked copy. Different npm/Node compression
+versions can produce different archive integrity even with identical files.
+
+```shell
+gh release download v5.0.0 --repo suminwell/CeenJs6-TypeScript-Declarations --pattern ceenjs6-5.0.0.tgz --dir dist/registry
+npm login --auth-type=web --registry=https://registry.npmjs.org/
+```
+
+A browser login or email login code does not necessarily authorize direct
+publication. Direct `npm publish dist/registry/ceenjs6-5.0.0.tgz --access public`
+requires the account's publishing 2FA or a token permitted by npm's policy.
+For the initial publication, npm 11.19 also supports staging the exact tarball
+and confirming publication separately:
+
+```shell
+npm stage publish dist/registry/ceenjs6-5.0.0.tgz --access public
+npm stage view <stage-id>
+npm stage approve <stage-id>
+```
+
+Wait for npm's automated review to finish before approving. The staged package
+page also shows the review state and allows approval. A staged upload is not
+a published registry version. If approval redirects to account 2FA setup,
+the account owner must enroll a passkey/security key in the official UI first;
+an email login code alone does not enroll account 2FA. Then approve the existing
+stage rather than uploading another copy. Run interactive authorization
+commands in a terminal and complete npm login/2FA in the official UI; do not
+commit credentials.
 
 The npm job publishes the exact tarball already checked and attached to the
 GitHub Release, with provenance. It verifies the registry's SHA-512 integrity.
