@@ -14,3 +14,5 @@ AGENTS.md
 
 /declarations/.generated/
 __pycache__/
+/dist/
+*.tgz

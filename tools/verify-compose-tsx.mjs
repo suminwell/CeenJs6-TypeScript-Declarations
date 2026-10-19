@@ -25,7 +25,7 @@ if (runtimePaths.length > 1) {
     process.stdout.write(JSON.stringify({reports}, null, 2) + "\n");
     process.exit(0);
 }
-const index = resolve(root, "declarations/autojs6/index.d.ts");
+const index = resolve(root, "declarations/ceenjs6/index.d.ts");
 const fixture = resolve(root, "docs/smoke/compose-tsx-smoke.tsx");
 const text = readFileSync(fixture, "utf8");
 const interopFixture = resolve(root, "docs/smoke/compose-interop-smoke.tsx");
@@ -35,8 +35,8 @@ const dialogText = readFileSync(dialogFixture, "utf8");
 const v2Fixture = resolve(root, "docs/smoke/compose-v2-smoke.tsx");
 const v2Text = readFileSync(v2Fixture, "utf8");
 const oldProjectionSource = [
-    "declare namespace AutoJs6Tsx { interface Element { readonly __xmlElementBrand: unique symbol; } }",
-    "declare namespace JSX { type Element = AutoJs6Tsx.Element; }",
+    "declare namespace CeenJs6Tsx { interface Element { readonly __xmlElementBrand: unique symbol; } }",
+    "declare namespace JSX { type Element = CeenJs6Tsx.Element; }",
 ].join("\n");
 const projectionProbe = [
     "const composeValue = <compose.Column><compose.Text text='Value'/></compose.Column>;",
@@ -67,7 +67,7 @@ for (const runtime of runtimePaths) {
     const options = {
         strict: true, exactOptionalPropertyTypes: true, skipLibCheck: true, noEmit: true,
         target: ts.ScriptTarget.ES2018, module: ts.ModuleKind.CommonJS, lib: ["lib.es2018.d.ts"], types: [],
-        jsx: ts.JsxEmit.React, jsxFactory: "__autojs6Tsx", jsxFragmentFactory: "__autojs6TsxFragment",
+        jsx: ts.JsxEmit.React, jsxFactory: "__ceenjs6Tsx", jsxFragmentFactory: "__ceenjs6TsxFragment",
     };
     if (Number(ts.versionMajorMinor.split(".")[0]) >= 6) options.ignoreDeprecations = "6.0";
     const program = ts.createProgram([index, fixture, interopFixture, dialogFixture, v2Fixture], options);
@@ -92,11 +92,11 @@ for (const runtime of runtimePaths) {
     const lowered = ts.transpileModule(projectionProbe + "\nconst fragment = <><compose.Text text='x'/></>;\nconst Alias=compose.Column; const alias=<Alias/>;", {
         compilerOptions: {...options, noEmit: false}, fileName: "real-classic-emit.tsx",
     }).outputText;
-    assert(lowered.includes("__autojs6Tsx(compose.Column,"));
-    assert(lowered.includes('__autojs6Tsx("compose:Column",'));
-    assert(lowered.includes('__autojs6Tsx("vertical",'));
-    assert(lowered.includes("__autojs6Tsx(__autojs6TsxFragment, null,"));
-    assert(lowered.includes("__autojs6Tsx(Alias, null)"));
+    assert(lowered.includes("__ceenjs6Tsx(compose.Column,"));
+    assert(lowered.includes('__ceenjs6Tsx("compose:Column",'));
+    assert(lowered.includes('__ceenjs6Tsx("vertical",'));
+    assert(lowered.includes("__ceenjs6Tsx(__ceenjs6TsxFragment, null,"));
+    assert(lowered.includes("__ceenjs6Tsx(Alias, null)"));
 
     const old = createProgram(ts, options, projectionProbe, oldProjectionSource);
     const oldDiagnostics = ts.getPreEmitDiagnostics(old.program)

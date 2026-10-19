@@ -24,7 +24,7 @@ renderer acceptance rather than being inferred from type checking.
 The normal `aj6dts -Publish` workflow completed from host commit
 `8cba2ce0e3aad5835879b0b91604caec9cb719b1`, appDebug/ace profile, with Android d.ts
 Generator 4.0.0 at `525bebdaa157087b1295d80cef0dae861152eda5`. The ignored
-`declarations/.generated/autojs6-dts-appDebug-ace.json` records that exact commit,
+`declarations/.generated/ceenjs6-dts-appDebug-ace.json` records that exact commit,
 the isolated Ace destination and successful TypeScript validation. Its schema
 has no dirty flag; the host checkout was independently checked at that commit
 with an empty Git status. Local machine paths and staging files are not included

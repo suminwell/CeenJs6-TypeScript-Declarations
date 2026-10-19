@@ -1,4 +1,4 @@
-/// <reference path="../../declarations/autojs6/index.d.ts" />
+/// <reference path="../../declarations/ceenjs6/index.d.ts" />
 
 // tsc --noEmit --strict --skipLibCheck --target ES2020 --lib ES2020 docs/smoke/compose-smoke.ts
 export {};
@@ -70,7 +70,7 @@ compose.LazyColumn({contentPadding: [1, 2], reverseLayout: true},
 
 declare const bitmap: android.graphics.Bitmap;
 declare const image: ImageWrapper;
-declare const themeColor: org.autojs.autojs.theme.ThemeColor;
+declare const themeColor: org.ceenjs.ceenjs.theme.ThemeColor;
 compose.Text({color: themeColor});
 const images = [compose.Image({src: image}), compose.Image({src: bitmap}), compose.Image({src: '@drawable/ic_launcher'})];
 const savedBitmap: android.graphics.Bitmap | null = images[0].src;

@@ -13450,12 +13450,12 @@ declare namespace okio {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace apkbuilder {
 				export namespace template {
 					export class ApkBuildProgress {
-						public static readonly CREATOR: __javaLibraryRoots.androidRoot.os.Parcelable.Creator<__javaLibraryRoots.orgRoot.autojs.plugin.apkbuilder.template.ApkBuildProgress>;
+						public static readonly CREATOR: __javaLibraryRoots.androidRoot.os.Parcelable.Creator<__javaLibraryRoots.orgRoot.ceenjs.plugin.apkbuilder.template.ApkBuildProgress>;
 						public static readonly STEP_BUILD: number;
 						public static readonly STEP_CLEAN: number;
 						public static readonly STEP_FINISH: number;
@@ -13478,7 +13478,7 @@ declare namespace org {
 						public component5(): number;
 						public component6(): number;
 						public component7(): __javaLibraryRoots.androidRoot.os.Bundle;
-						public copy(step: number, title: string, detail: string, current: number, total: number, percent: number, extras: __javaLibraryRoots.androidRoot.os.Bundle): __javaLibraryRoots.orgRoot.autojs.plugin.apkbuilder.template.ApkBuildProgress;
+						public copy(step: number, title: string, detail: string, current: number, total: number, percent: number, extras: __javaLibraryRoots.androidRoot.os.Bundle): __javaLibraryRoots.orgRoot.ceenjs.plugin.apkbuilder.template.ApkBuildProgress;
 						public describeContents(): number;
 						public equals(other: any): boolean;
 						public getCurrent(): number;
@@ -13506,12 +13506,12 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace common {
 				export namespace api {
 					export class PluginInfo {
-						public static readonly CREATOR: __javaLibraryRoots.androidRoot.os.Parcelable.Creator<__javaLibraryRoots.orgRoot.autojs.plugin.common.api.PluginInfo>;
+						public static readonly CREATOR: __javaLibraryRoots.androidRoot.os.Parcelable.Creator<__javaLibraryRoots.orgRoot.ceenjs.plugin.common.api.PluginInfo>;
 						public readonly author: string;
 						public readonly capabilities: __javaLibraryRoots.androidRoot.os.Bundle;
 						public readonly collaborators: string[];
@@ -13563,20 +13563,20 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace compose {
 				export namespace api {
 					export namespace catalog {
-						export class ChildrenPolicy extends __javaLibraryRoots.javaRoot.lang.Enum<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ChildrenPolicy> {
-							public static readonly LAZY_ITEMS: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ChildrenPolicy;
-							public static readonly MANY: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ChildrenPolicy;
-							public static readonly NONE: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ChildrenPolicy;
-							public static readonly SINGLE: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ChildrenPolicy;
-							public static readonly entries: __javaLibraryRoots.kotlinRoot.enums.EnumEntries<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ChildrenPolicy>;
-							public static getEntries(): __javaLibraryRoots.kotlinRoot.enums.EnumEntries<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ChildrenPolicy>;
-							public static valueOf(value: string): __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ChildrenPolicy;
-							public static values(): __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ChildrenPolicy[];
+						export class ChildrenPolicy extends __javaLibraryRoots.javaRoot.lang.Enum<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ChildrenPolicy> {
+							public static readonly LAZY_ITEMS: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ChildrenPolicy;
+							public static readonly MANY: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ChildrenPolicy;
+							public static readonly NONE: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ChildrenPolicy;
+							public static readonly SINGLE: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ChildrenPolicy;
+							public static readonly entries: __javaLibraryRoots.kotlinRoot.enums.EnumEntries<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ChildrenPolicy>;
+							public static getEntries(): __javaLibraryRoots.kotlinRoot.enums.EnumEntries<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ChildrenPolicy>;
+							public static valueOf(value: string): __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ChildrenPolicy;
+							public static values(): __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ChildrenPolicy[];
 							protected constructor();
 							public static valueOf(...args: any[]): any;
 						}
@@ -13587,28 +13587,28 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace compose {
 				export namespace api {
 					export namespace catalog {
 						export class ComponentCatalog {
-							public static readonly V1: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ComponentCatalog;
-							public readonly components: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ComponentSpec>;
-							public readonly modifiers: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ModifierSpec>;
-							public readonly shortcuts: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ShortcutSpec>;
-							public readonly systemEvents: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.EventSpec>;
-							public constructor(components: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ComponentSpec>, modifiers: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ModifierSpec>, shortcuts: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ShortcutSpec>, systemEvents: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.EventSpec>);
-							public component(name: string): __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ComponentSpec;
-							public getComponents(): __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ComponentSpec>;
-							public getModifiers(): __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ModifierSpec>;
-							public getShortcuts(): __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ShortcutSpec>;
-							public getSystemEvents(): __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.EventSpec>;
-							public modifier(name: string): __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ModifierSpec;
-							public normalizeProperties(component: string, props: __javaLibraryRoots.javaRoot.util.Map<string, __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.UiValue>, modifier: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ModifierOp>): __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.NormalizedProps;
-							public requireComponent(name: string): __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ComponentSpec;
-							public validateModifier(op: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ModifierOp, parentType: string, checkParent: boolean): void;
-							public validateNode(node: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.UiNode, parentType: string): void;
+							public static readonly V1: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ComponentCatalog;
+							public readonly components: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ComponentSpec>;
+							public readonly modifiers: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ModifierSpec>;
+							public readonly shortcuts: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ShortcutSpec>;
+							public readonly systemEvents: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.EventSpec>;
+							public constructor(components: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ComponentSpec>, modifiers: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ModifierSpec>, shortcuts: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ShortcutSpec>, systemEvents: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.EventSpec>);
+							public component(name: string): __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ComponentSpec;
+							public getComponents(): __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ComponentSpec>;
+							public getModifiers(): __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ModifierSpec>;
+							public getShortcuts(): __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ShortcutSpec>;
+							public getSystemEvents(): __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.EventSpec>;
+							public modifier(name: string): __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ModifierSpec;
+							public normalizeProperties(component: string, props: __javaLibraryRoots.javaRoot.util.Map<string, __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.UiValue>, modifier: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ModifierOp>): __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.NormalizedProps;
+							public requireComponent(name: string): __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ComponentSpec;
+							public validateModifier(op: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ModifierOp, parentType: string, checkParent: boolean): void;
+							public validateNode(node: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.UiNode, parentType: string): void;
 						}
 					}
 				}
@@ -13617,18 +13617,18 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace compose {
 				export namespace api {
 					export namespace catalog {
-						export class ComponentInvocation extends __javaLibraryRoots.javaRoot.lang.Enum<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ComponentInvocation> {
-							public static readonly COMMAND: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ComponentInvocation;
-							public static readonly NODE: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ComponentInvocation;
-							public static readonly entries: __javaLibraryRoots.kotlinRoot.enums.EnumEntries<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ComponentInvocation>;
-							public static getEntries(): __javaLibraryRoots.kotlinRoot.enums.EnumEntries<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ComponentInvocation>;
-							public static valueOf(value: string): __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ComponentInvocation;
-							public static values(): __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ComponentInvocation[];
+						export class ComponentInvocation extends __javaLibraryRoots.javaRoot.lang.Enum<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ComponentInvocation> {
+							public static readonly COMMAND: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ComponentInvocation;
+							public static readonly NODE: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ComponentInvocation;
+							public static readonly entries: __javaLibraryRoots.kotlinRoot.enums.EnumEntries<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ComponentInvocation>;
+							public static getEntries(): __javaLibraryRoots.kotlinRoot.enums.EnumEntries<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ComponentInvocation>;
+							public static valueOf(value: string): __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ComponentInvocation;
+							public static values(): __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ComponentInvocation[];
 							protected constructor();
 							public static valueOf(...args: any[]): any;
 						}
@@ -13639,29 +13639,29 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace compose {
 				export namespace api {
 					export namespace catalog {
 						export class ComponentSpec {
-							public readonly childrenPolicy: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ChildrenPolicy;
+							public readonly childrenPolicy: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ChildrenPolicy;
 							public readonly commands: __javaLibraryRoots.javaRoot.util.List<string>;
-							public readonly events: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.EventSpec>;
-							public readonly invocation: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ComponentInvocation;
+							public readonly events: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.EventSpec>;
+							public readonly invocation: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ComponentInvocation;
 							public readonly name: string;
-							public readonly props: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.PropSpec>;
-							public readonly scope: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ScopeKind;
-							public readonly slots: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.SlotSpec>;
-							public constructor(name: string, props: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.PropSpec>, slots: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.SlotSpec>, events: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.EventSpec>, childrenPolicy: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ChildrenPolicy, scope: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ScopeKind, commands: __javaLibraryRoots.javaRoot.util.List<string>, invocation: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ComponentInvocation);
-							public getChildrenPolicy(): __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ChildrenPolicy;
+							public readonly props: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.PropSpec>;
+							public readonly scope: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ScopeKind;
+							public readonly slots: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.SlotSpec>;
+							public constructor(name: string, props: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.PropSpec>, slots: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.SlotSpec>, events: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.EventSpec>, childrenPolicy: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ChildrenPolicy, scope: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ScopeKind, commands: __javaLibraryRoots.javaRoot.util.List<string>, invocation: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ComponentInvocation);
+							public getChildrenPolicy(): __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ChildrenPolicy;
 							public getCommands(): __javaLibraryRoots.javaRoot.util.List<string>;
-							public getEvents(): __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.EventSpec>;
-							public getInvocation(): __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ComponentInvocation;
+							public getEvents(): __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.EventSpec>;
+							public getInvocation(): __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ComponentInvocation;
 							public getName(): string;
-							public getProps(): __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.PropSpec>;
-							public getScope(): __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ScopeKind;
-							public getSlots(): __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.SlotSpec>;
+							public getProps(): __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.PropSpec>;
+							public getScope(): __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ScopeKind;
+							public getSlots(): __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.SlotSpec>;
 						}
 					}
 				}
@@ -13670,17 +13670,17 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace compose {
 				export namespace api {
 					export namespace catalog {
 						export class EventSpec {
 							public readonly name: string;
-							public readonly payloadFields: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.PayloadFieldSpec>;
-							public constructor(name: string, payloadFields: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.PayloadFieldSpec>);
+							public readonly payloadFields: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.PayloadFieldSpec>;
+							public constructor(name: string, payloadFields: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.PayloadFieldSpec>);
 							public getName(): string;
-							public getPayloadFields(): __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.PayloadFieldSpec>;
+							public getPayloadFields(): __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.PayloadFieldSpec>;
 						}
 					}
 				}
@@ -13689,21 +13689,21 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace compose {
 				export namespace api {
 					export namespace catalog {
 						export class ModifierArgSpec {
 							public readonly callback: boolean;
-							public readonly defaultValue: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.UiValue;
+							public readonly defaultValue: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.UiValue;
 							public readonly name: string;
-							public readonly type: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ValueType;
-							public constructor(name: string, _type_: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ValueType, defaultValue: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.UiValue, callback: boolean);
+							public readonly type: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ValueType;
+							public constructor(name: string, _type_: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ValueType, defaultValue: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.UiValue, callback: boolean);
 							public getCallback(): boolean;
-							public getDefaultValue(): __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.UiValue;
+							public getDefaultValue(): __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.UiValue;
 							public getName(): string;
-							public getType(): __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ValueType;
+							public getType(): __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ValueType;
 						}
 					}
 				}
@@ -13712,16 +13712,16 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace compose {
 				export namespace api {
 					export namespace catalog {
 						export class ModifierSignature {
-							public readonly args: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ModifierArgSpec>;
+							public readonly args: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ModifierArgSpec>;
 							public readonly requiredCount: number;
-							public constructor(args: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ModifierArgSpec>);
-							public getArgs(): __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ModifierArgSpec>;
+							public constructor(args: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ModifierArgSpec>);
+							public getArgs(): __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ModifierArgSpec>;
 							public getRequiredCount(): number;
 						}
 					}
@@ -13731,7 +13731,7 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace compose {
 				export namespace api {
@@ -13740,14 +13740,14 @@ declare namespace org {
 							public readonly allowedParents: __javaLibraryRoots.javaRoot.util.List<string>;
 							public readonly commands: __javaLibraryRoots.javaRoot.util.List<string>;
 							public readonly name: string;
-							public readonly scope: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ScopeKind;
-							public readonly signatures: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ModifierSignature>;
-							public constructor(name: string, signatures: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ModifierSignature>, scope: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ScopeKind, allowedParents: __javaLibraryRoots.javaRoot.util.List<string>, commands: __javaLibraryRoots.javaRoot.util.List<string>);
+							public readonly scope: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ScopeKind;
+							public readonly signatures: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ModifierSignature>;
+							public constructor(name: string, signatures: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ModifierSignature>, scope: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ScopeKind, allowedParents: __javaLibraryRoots.javaRoot.util.List<string>, commands: __javaLibraryRoots.javaRoot.util.List<string>);
 							public getAllowedParents(): __javaLibraryRoots.javaRoot.util.List<string>;
 							public getCommands(): __javaLibraryRoots.javaRoot.util.List<string>;
 							public getName(): string;
-							public getScope(): __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ScopeKind;
-							public getSignatures(): __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ModifierSignature>;
+							public getScope(): __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ScopeKind;
+							public getSignatures(): __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ModifierSignature>;
 						}
 					}
 				}
@@ -13756,17 +13756,17 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace compose {
 				export namespace api {
 					export namespace catalog {
 						export class NormalizedProps {
-							public readonly modifier: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ModifierOp>;
-							public readonly props: __javaLibraryRoots.javaRoot.util.Map<string, __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.UiValue>;
-							public constructor(props: __javaLibraryRoots.javaRoot.util.Map<string, __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.UiValue>, modifier: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ModifierOp>);
-							public getModifier(): __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ModifierOp>;
-							public getProps(): __javaLibraryRoots.javaRoot.util.Map<string, __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.UiValue>;
+							public readonly modifier: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ModifierOp>;
+							public readonly props: __javaLibraryRoots.javaRoot.util.Map<string, __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.UiValue>;
+							public constructor(props: __javaLibraryRoots.javaRoot.util.Map<string, __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.UiValue>, modifier: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ModifierOp>);
+							public getModifier(): __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ModifierOp>;
+							public getProps(): __javaLibraryRoots.javaRoot.util.Map<string, __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.UiValue>;
 						}
 					}
 				}
@@ -13775,7 +13775,7 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace compose {
 				export namespace api {
@@ -13783,11 +13783,11 @@ declare namespace org {
 						export class PayloadFieldSpec {
 							public readonly name: string;
 							public readonly required: boolean;
-							public readonly type: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.PayloadType;
-							public constructor(name: string, _type_: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.PayloadType, required: boolean);
+							public readonly type: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.PayloadType;
+							public constructor(name: string, _type_: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.PayloadType, required: boolean);
 							public getName(): string;
 							public getRequired(): boolean;
-							public getType(): __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.PayloadType;
+							public getType(): __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.PayloadType;
 						}
 					}
 				}
@@ -13796,21 +13796,21 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace compose {
 				export namespace api {
 					export namespace catalog {
-						export class PayloadType extends __javaLibraryRoots.javaRoot.lang.Enum<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.PayloadType> {
-							public static readonly BOOLEAN: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.PayloadType;
-							public static readonly INTEGER: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.PayloadType;
-							public static readonly LONG: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.PayloadType;
-							public static readonly NUMBER: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.PayloadType;
-							public static readonly STRING: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.PayloadType;
-							public static readonly entries: __javaLibraryRoots.kotlinRoot.enums.EnumEntries<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.PayloadType>;
-							public static getEntries(): __javaLibraryRoots.kotlinRoot.enums.EnumEntries<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.PayloadType>;
-							public static valueOf(value: string): __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.PayloadType;
-							public static values(): __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.PayloadType[];
+						export class PayloadType extends __javaLibraryRoots.javaRoot.lang.Enum<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.PayloadType> {
+							public static readonly BOOLEAN: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.PayloadType;
+							public static readonly INTEGER: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.PayloadType;
+							public static readonly LONG: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.PayloadType;
+							public static readonly NUMBER: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.PayloadType;
+							public static readonly STRING: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.PayloadType;
+							public static readonly entries: __javaLibraryRoots.kotlinRoot.enums.EnumEntries<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.PayloadType>;
+							public static getEntries(): __javaLibraryRoots.kotlinRoot.enums.EnumEntries<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.PayloadType>;
+							public static valueOf(value: string): __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.PayloadType;
+							public static values(): __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.PayloadType[];
 							protected constructor();
 							public static valueOf(...args: any[]): any;
 						}
@@ -13821,25 +13821,25 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace compose {
 				export namespace api {
 					export namespace catalog {
 						export class PropSpec {
 							public readonly aliases: __javaLibraryRoots.javaRoot.util.List<string>;
-							public readonly defaultValue: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.UiValue;
+							public readonly defaultValue: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.UiValue;
 							public readonly name: string;
 							public readonly required: boolean;
-							public readonly type: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ValueType;
-							public readonly update: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.PropertyUpdate;
-							public constructor(name: string, _type_: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ValueType, required: boolean, defaultValue: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.UiValue, aliases: __javaLibraryRoots.javaRoot.util.List<string>, update: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.PropertyUpdate);
+							public readonly type: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ValueType;
+							public readonly update: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.PropertyUpdate;
+							public constructor(name: string, _type_: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ValueType, required: boolean, defaultValue: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.UiValue, aliases: __javaLibraryRoots.javaRoot.util.List<string>, update: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.PropertyUpdate);
 							public getAliases(): __javaLibraryRoots.javaRoot.util.List<string>;
-							public getDefaultValue(): __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.UiValue;
+							public getDefaultValue(): __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.UiValue;
 							public getName(): string;
 							public getRequired(): boolean;
-							public getType(): __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ValueType;
-							public getUpdate(): __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.PropertyUpdate;
+							public getType(): __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ValueType;
+							public getUpdate(): __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.PropertyUpdate;
 						}
 					}
 				}
@@ -13848,18 +13848,18 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace compose {
 				export namespace api {
 					export namespace catalog {
-						export class PropertyUpdate extends __javaLibraryRoots.javaRoot.lang.Enum<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.PropertyUpdate> {
-							public static readonly EDIT_COMMAND: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.PropertyUpdate;
-							public static readonly SET_PROPS: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.PropertyUpdate;
-							public static readonly entries: __javaLibraryRoots.kotlinRoot.enums.EnumEntries<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.PropertyUpdate>;
-							public static getEntries(): __javaLibraryRoots.kotlinRoot.enums.EnumEntries<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.PropertyUpdate>;
-							public static valueOf(value: string): __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.PropertyUpdate;
-							public static values(): __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.PropertyUpdate[];
+						export class PropertyUpdate extends __javaLibraryRoots.javaRoot.lang.Enum<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.PropertyUpdate> {
+							public static readonly EDIT_COMMAND: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.PropertyUpdate;
+							public static readonly SET_PROPS: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.PropertyUpdate;
+							public static readonly entries: __javaLibraryRoots.kotlinRoot.enums.EnumEntries<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.PropertyUpdate>;
+							public static getEntries(): __javaLibraryRoots.kotlinRoot.enums.EnumEntries<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.PropertyUpdate>;
+							public static valueOf(value: string): __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.PropertyUpdate;
+							public static values(): __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.PropertyUpdate[];
 							protected constructor();
 							public static valueOf(...args: any[]): any;
 						}
@@ -13870,7 +13870,7 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace compose {
 				export namespace api {
@@ -13891,7 +13891,7 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace compose {
 				export namespace api {
@@ -13910,7 +13910,7 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace compose {
 				export namespace api {
@@ -13918,19 +13918,19 @@ declare namespace org {
 						export class ValueType {
 							public readonly enumValues: __javaLibraryRoots.javaRoot.util.List<string>;
 							public readonly integral: boolean;
-							public readonly kinds: __javaLibraryRoots.javaRoot.util.Set<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ValueKind>;
-							public readonly listKinds: __javaLibraryRoots.javaRoot.util.Set<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ValueKind>;
+							public readonly kinds: __javaLibraryRoots.javaRoot.util.Set<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ValueKind>;
+							public readonly listKinds: __javaLibraryRoots.javaRoot.util.Set<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ValueKind>;
 							public readonly listMaximum: number;
 							public readonly listMinimum: number;
 							public readonly maximum: __javaLibraryRoots.javaRoot.lang.Double;
 							public readonly minimum: __javaLibraryRoots.javaRoot.lang.Double;
 							public readonly minimumExclusive: boolean;
-							public constructor(kinds: __javaLibraryRoots.javaRoot.util.Set<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ValueKind>, enumValues: __javaLibraryRoots.javaRoot.util.List<string>, minimum: __javaLibraryRoots.javaRoot.lang.Double, maximum: __javaLibraryRoots.javaRoot.lang.Double, minimumExclusive: boolean, integral: boolean, listKinds: __javaLibraryRoots.javaRoot.util.Set<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ValueKind>, listMinimum: number, listMaximum: number);
-							public accepts(value: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.UiValue): boolean;
+							public constructor(kinds: __javaLibraryRoots.javaRoot.util.Set<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ValueKind>, enumValues: __javaLibraryRoots.javaRoot.util.List<string>, minimum: __javaLibraryRoots.javaRoot.lang.Double, maximum: __javaLibraryRoots.javaRoot.lang.Double, minimumExclusive: boolean, integral: boolean, listKinds: __javaLibraryRoots.javaRoot.util.Set<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ValueKind>, listMinimum: number, listMaximum: number);
+							public accepts(value: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.UiValue): boolean;
 							public getEnumValues(): __javaLibraryRoots.javaRoot.util.List<string>;
 							public getIntegral(): boolean;
-							public getKinds(): __javaLibraryRoots.javaRoot.util.Set<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ValueKind>;
-							public getListKinds(): __javaLibraryRoots.javaRoot.util.Set<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ValueKind>;
+							public getKinds(): __javaLibraryRoots.javaRoot.util.Set<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ValueKind>;
+							public getListKinds(): __javaLibraryRoots.javaRoot.util.Set<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ValueKind>;
 							public getListMaximum(): number;
 							public getListMinimum(): number;
 							public getMaximum(): __javaLibraryRoots.javaRoot.lang.Double;
@@ -13944,7 +13944,7 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace compose {
 				export namespace api {
@@ -13965,7 +13965,7 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace compose {
 				export namespace api {
@@ -13974,11 +13974,11 @@ declare namespace org {
 							public static readonly COMPONENT: string;
 							public static readonly FACTORY_CLASS_KEY: string;
 							public static readonly FEATURE: string;
-							public static readonly INSTANCE: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.interop.AndroidViewInteropV1;
+							public static readonly INSTANCE: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.interop.AndroidViewInteropV1;
 							public static readonly PROP_VIEW: string;
 							public static readonly VERSION: number;
-							public static readonly catalog: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ComponentCatalog;
-							public static readonly component: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ComponentSpec;
+							public static readonly catalog: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ComponentCatalog;
+							public static readonly component: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ComponentSpec;
 							protected constructor();
 						}
 					}
@@ -13988,7 +13988,7 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace compose {
 				export namespace api {
@@ -13998,7 +13998,7 @@ declare namespace org {
 							public constructor();
 						}
 						export interface ComposeUiEventSink {
-							enqueue(param0: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.UiEvent): void;
+							enqueue(param0: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.UiEvent): void;
 						}
 					}
 				}
@@ -14007,7 +14007,7 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace compose {
 				export namespace api {
@@ -14029,21 +14029,21 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace compose {
 				export namespace api {
 					export namespace model {
-						export class ModifierOp extends __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ComposeParcelable {
-							public static readonly CREATOR: __javaLibraryRoots.androidRoot.os.Parcelable.Creator<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ModifierOp>;
-							public readonly args: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.UiValue>;
+						export class ModifierOp extends __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ComposeParcelable {
+							public static readonly CREATOR: __javaLibraryRoots.androidRoot.os.Parcelable.Creator<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ModifierOp>;
+							public readonly args: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.UiValue>;
 							public readonly name: string;
-							public readonly scope: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ScopeKind;
-							public constructor(name: string, args: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.UiValue>, scope: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ScopeKind);
+							public readonly scope: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ScopeKind;
+							public constructor(name: string, args: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.UiValue>, scope: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ScopeKind);
 							public fields$compose_ui_api(): __javaLibraryRoots.javaRoot.util.List<any>;
-							public getArgs(): __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.UiValue>;
+							public getArgs(): __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.UiValue>;
 							public getName(): string;
-							public getScope(): __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ScopeKind;
+							public getScope(): __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ScopeKind;
 						}
 					}
 				}
@@ -14052,19 +14052,19 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace compose {
 				export namespace api {
 					export namespace model {
-						export class ScopeKind extends __javaLibraryRoots.javaRoot.lang.Enum<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ScopeKind> {
-							public static readonly ANY: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ScopeKind;
-							public static readonly BOX: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ScopeKind;
-							public static readonly COLUMN_ROW: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ScopeKind;
-							public static readonly entries: __javaLibraryRoots.kotlinRoot.enums.EnumEntries<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ScopeKind>;
-							public static getEntries(): __javaLibraryRoots.kotlinRoot.enums.EnumEntries<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ScopeKind>;
-							public static valueOf(value: string): __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ScopeKind;
-							public static values(): __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ScopeKind[];
+						export class ScopeKind extends __javaLibraryRoots.javaRoot.lang.Enum<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ScopeKind> {
+							public static readonly ANY: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ScopeKind;
+							public static readonly BOX: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ScopeKind;
+							public static readonly COLUMN_ROW: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ScopeKind;
+							public static readonly entries: __javaLibraryRoots.kotlinRoot.enums.EnumEntries<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ScopeKind>;
+							public static getEntries(): __javaLibraryRoots.kotlinRoot.enums.EnumEntries<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ScopeKind>;
+							public static valueOf(value: string): __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ScopeKind;
+							public static values(): __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ScopeKind[];
 							protected constructor();
 							public static valueOf(...args: any[]): any;
 						}
@@ -14075,13 +14075,13 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace compose {
 				export namespace api {
 					export namespace model {
-						export class TextSelection extends __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ComposeParcelable {
-							public static readonly CREATOR: __javaLibraryRoots.androidRoot.os.Parcelable.Creator<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.TextSelection>;
+						export class TextSelection extends __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ComposeParcelable {
+							public static readonly CREATOR: __javaLibraryRoots.androidRoot.os.Parcelable.Creator<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.TextSelection>;
 							public readonly end: number;
 							public readonly start: number;
 							public constructor(start: number, end: number);
@@ -14097,13 +14097,13 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace compose {
 				export namespace api {
 					export namespace model {
-						export class ThemeSpec extends __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ComposeParcelable {
-							public static readonly CREATOR: __javaLibraryRoots.androidRoot.os.Parcelable.Creator<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ThemeSpec>;
+						export class ThemeSpec extends __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ComposeParcelable {
+							public static readonly CREATOR: __javaLibraryRoots.androidRoot.os.Parcelable.Creator<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ThemeSpec>;
 							public readonly colorOverrides: __javaLibraryRoots.javaRoot.util.Map<string, __javaLibraryRoots.javaRoot.lang.Integer>;
 							public readonly dark: __javaLibraryRoots.javaRoot.lang.Boolean;
 							public readonly dynamicColor: boolean;
@@ -14127,27 +14127,27 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace compose {
 				export namespace api {
 					export namespace model {
-						export abstract class UiCommand extends __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ComposeParcelable {
-							public static readonly CREATOR: __javaLibraryRoots.androidRoot.os.Parcelable.Creator<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.UiCommand>;
+						export abstract class UiCommand extends __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ComposeParcelable {
+							public static readonly CREATOR: __javaLibraryRoots.androidRoot.os.Parcelable.Creator<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.UiCommand>;
 							protected constructor();
 						}
 						export namespace UiCommand {
-							export class Edit extends __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.UiCommand {
-								public static readonly CREATOR: __javaLibraryRoots.androidRoot.os.Parcelable.Creator<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.UiCommand.Edit>;
+							export class Edit extends __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.UiCommand {
+								public static readonly CREATOR: __javaLibraryRoots.androidRoot.os.Parcelable.Creator<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.UiCommand.Edit>;
 								public readonly editSeq: number;
 								public readonly nodeId: number;
-								public readonly selection: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.TextSelection;
+								public readonly selection: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.TextSelection;
 								public readonly text: string;
-								public constructor(nodeId: number, text: string, selection: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.TextSelection, editSeq: number);
+								public constructor(nodeId: number, text: string, selection: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.TextSelection, editSeq: number);
 								public fields$compose_ui_api(): __javaLibraryRoots.javaRoot.util.List<any>;
 								public getEditSeq(): number;
 								public getNodeId(): number;
-								public getSelection(): __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.TextSelection;
+								public getSelection(): __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.TextSelection;
 								public getText(): string;
 							}
 						}
@@ -14158,13 +14158,13 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace compose {
 				export namespace api {
 					export namespace model {
-						export class UiEvent extends __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ComposeParcelable {
-							public static readonly CREATOR: __javaLibraryRoots.androidRoot.os.Parcelable.Creator<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.UiEvent>;
+						export class UiEvent extends __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ComposeParcelable {
+							public static readonly CREATOR: __javaLibraryRoots.androidRoot.os.Parcelable.Creator<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.UiEvent>;
 							public readonly callbackId: number;
 							public readonly generation: number;
 							public readonly nodeId: number;
@@ -14189,29 +14189,29 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace compose {
 				export namespace api {
 					export namespace model {
-						export class UiNode extends __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ComposeParcelable {
-							public static readonly CREATOR: __javaLibraryRoots.androidRoot.os.Parcelable.Creator<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.UiNode>;
+						export class UiNode extends __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ComposeParcelable {
+							public static readonly CREATOR: __javaLibraryRoots.androidRoot.os.Parcelable.Creator<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.UiNode>;
 							public readonly callbacks: __javaLibraryRoots.javaRoot.util.Map<string, __javaLibraryRoots.javaRoot.lang.Integer>;
 							public readonly children: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.javaRoot.lang.Integer>;
 							public readonly key: string;
-							public readonly modifier: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ModifierOp>;
+							public readonly modifier: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ModifierOp>;
 							public readonly nodeId: number;
-							public readonly props: __javaLibraryRoots.javaRoot.util.Map<string, __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.UiValue>;
+							public readonly props: __javaLibraryRoots.javaRoot.util.Map<string, __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.UiValue>;
 							public readonly slots: __javaLibraryRoots.javaRoot.util.Map<string, __javaLibraryRoots.javaRoot.lang.Integer>;
 							public readonly type: string;
-							public constructor(nodeId: number, _type_: string, key: string, props: __javaLibraryRoots.javaRoot.util.Map<string, __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.UiValue>, modifier: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ModifierOp>, children: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.javaRoot.lang.Integer>, slots: __javaLibraryRoots.javaRoot.util.Map<string, __javaLibraryRoots.javaRoot.lang.Integer>, callbacks: __javaLibraryRoots.javaRoot.util.Map<string, __javaLibraryRoots.javaRoot.lang.Integer>);
+							public constructor(nodeId: number, _type_: string, key: string, props: __javaLibraryRoots.javaRoot.util.Map<string, __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.UiValue>, modifier: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ModifierOp>, children: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.javaRoot.lang.Integer>, slots: __javaLibraryRoots.javaRoot.util.Map<string, __javaLibraryRoots.javaRoot.lang.Integer>, callbacks: __javaLibraryRoots.javaRoot.util.Map<string, __javaLibraryRoots.javaRoot.lang.Integer>);
 							public fields$compose_ui_api(): __javaLibraryRoots.javaRoot.util.List<any>;
 							public getCallbacks(): __javaLibraryRoots.javaRoot.util.Map<string, __javaLibraryRoots.javaRoot.lang.Integer>;
 							public getChildren(): __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.javaRoot.lang.Integer>;
 							public getKey(): string;
-							public getModifier(): __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ModifierOp>;
+							public getModifier(): __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ModifierOp>;
 							public getNodeId(): number;
-							public getProps(): __javaLibraryRoots.javaRoot.util.Map<string, __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.UiValue>;
+							public getProps(): __javaLibraryRoots.javaRoot.util.Map<string, __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.UiValue>;
 							public getSlots(): __javaLibraryRoots.javaRoot.util.Map<string, __javaLibraryRoots.javaRoot.lang.Integer>;
 							public getType(): string;
 						}
@@ -14222,13 +14222,13 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace compose {
 				export namespace api {
 					export namespace model {
-						export abstract class UiPatch extends __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ComposeParcelable {
-							public static readonly CREATOR: __javaLibraryRoots.androidRoot.os.Parcelable.Creator<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.UiPatch>;
+						export abstract class UiPatch extends __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ComposeParcelable {
+							public static readonly CREATOR: __javaLibraryRoots.androidRoot.os.Parcelable.Creator<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.UiPatch>;
 							protected constructor();
 						}
 					}
@@ -14238,20 +14238,20 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace compose {
 				export namespace api {
 					export namespace model {
-						export class UiPatchBatch extends __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ComposeParcelable {
-							public static readonly CREATOR: __javaLibraryRoots.androidRoot.os.Parcelable.Creator<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.UiPatchBatch>;
+						export class UiPatchBatch extends __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ComposeParcelable {
+							public static readonly CREATOR: __javaLibraryRoots.androidRoot.os.Parcelable.Creator<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.UiPatchBatch>;
 							public readonly generation: number;
-							public readonly patches: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.UiPatch>;
+							public readonly patches: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.UiPatch>;
 							public readonly sessionId: number;
-							public constructor(sessionId: number, generation: number, patches: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.UiPatch>);
+							public constructor(sessionId: number, generation: number, patches: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.UiPatch>);
 							public fields$compose_ui_api(): __javaLibraryRoots.javaRoot.util.List<any>;
 							public getGeneration(): number;
-							public getPatches(): __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.UiPatch>;
+							public getPatches(): __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.UiPatch>;
 							public getSessionId(): number;
 						}
 					}
@@ -14261,18 +14261,18 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace compose {
 				export namespace api {
 					export namespace model {
-						export class UiTree extends __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ComposeParcelable {
-							public static readonly CREATOR: __javaLibraryRoots.androidRoot.os.Parcelable.Creator<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.UiTree>;
-							public readonly nodes: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.UiNode>;
+						export class UiTree extends __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ComposeParcelable {
+							public static readonly CREATOR: __javaLibraryRoots.androidRoot.os.Parcelable.Creator<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.UiTree>;
+							public readonly nodes: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.UiNode>;
 							public readonly rootId: number;
-							public constructor(rootId: number, nodes: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.UiNode>);
+							public constructor(rootId: number, nodes: __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.UiNode>);
 							public fields$compose_ui_api(): __javaLibraryRoots.javaRoot.util.List<any>;
-							public getNodes(): __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.UiNode>;
+							public getNodes(): __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.UiNode>;
 							public getRootId(): number;
 						}
 					}
@@ -14282,22 +14282,22 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace compose {
 				export namespace api {
 					export namespace model {
-						export abstract class UiValue extends __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ComposeParcelable {
-							public static readonly CREATOR: __javaLibraryRoots.androidRoot.os.Parcelable.Creator<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.UiValue>;
+						export abstract class UiValue extends __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ComposeParcelable {
+							public static readonly CREATOR: __javaLibraryRoots.androidRoot.os.Parcelable.Creator<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.UiValue>;
 							public readonly depth$compose_ui_api: number;
-							public readonly kind: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ValueKind;
+							public readonly kind: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ValueKind;
 							public getDepth$compose_ui_api(): number;
-							public getKind(): __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ValueKind;
+							public getKind(): __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ValueKind;
 							protected constructor();
 						}
 						export namespace UiValue {
-							export class BitmapRef extends __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.UiValue {
-								public static readonly CREATOR: __javaLibraryRoots.androidRoot.os.Parcelable.Creator<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.UiValue.BitmapRef>;
+							export class BitmapRef extends __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.UiValue {
+								public static readonly CREATOR: __javaLibraryRoots.androidRoot.os.Parcelable.Creator<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.UiValue.BitmapRef>;
 								public readonly handle$compose_ui_api: number;
 								public constructor(bitmap: __javaLibraryRoots.androidRoot.graphics.Bitmap);
 								public fields$compose_ui_api(): __javaLibraryRoots.javaRoot.util.List<__javaLibraryRoots.javaRoot.lang.Long>;
@@ -14313,29 +14313,29 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace compose {
 				export namespace api {
 					export namespace model {
-						export class ValueKind extends __javaLibraryRoots.javaRoot.lang.Enum<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ValueKind> {
-							public static readonly BITMAP: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ValueKind;
-							public static readonly BOOLEAN: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ValueKind;
-							public static readonly COLOR: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ValueKind;
-							public static readonly DP: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ValueKind;
-							public static readonly ENUM: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ValueKind;
-							public static readonly ICON_NAME: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ValueKind;
-							public static readonly LIST: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ValueKind;
-							public static readonly NULL: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ValueKind;
-							public static readonly NUMBER: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ValueKind;
-							public static readonly SHAPE: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ValueKind;
-							public static readonly SP: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ValueKind;
-							public static readonly STRING: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ValueKind;
-							public static readonly TEXT_STYLE: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ValueKind;
-							public static readonly entries: __javaLibraryRoots.kotlinRoot.enums.EnumEntries<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ValueKind>;
-							public static getEntries(): __javaLibraryRoots.kotlinRoot.enums.EnumEntries<__javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ValueKind>;
-							public static valueOf(value: string): __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ValueKind;
-							public static values(): __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.ValueKind[];
+						export class ValueKind extends __javaLibraryRoots.javaRoot.lang.Enum<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ValueKind> {
+							public static readonly BITMAP: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ValueKind;
+							public static readonly BOOLEAN: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ValueKind;
+							public static readonly COLOR: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ValueKind;
+							public static readonly DP: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ValueKind;
+							public static readonly ENUM: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ValueKind;
+							public static readonly ICON_NAME: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ValueKind;
+							public static readonly LIST: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ValueKind;
+							public static readonly NULL: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ValueKind;
+							public static readonly NUMBER: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ValueKind;
+							public static readonly SHAPE: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ValueKind;
+							public static readonly SP: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ValueKind;
+							public static readonly STRING: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ValueKind;
+							public static readonly TEXT_STYLE: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ValueKind;
+							public static readonly entries: __javaLibraryRoots.kotlinRoot.enums.EnumEntries<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ValueKind>;
+							public static getEntries(): __javaLibraryRoots.kotlinRoot.enums.EnumEntries<__javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ValueKind>;
+							public static valueOf(value: string): __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ValueKind;
+							public static values(): __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.ValueKind[];
 							protected constructor();
 							public static valueOf(...args: any[]): any;
 						}
@@ -14346,21 +14346,21 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace compose {
 				export namespace api {
 					export namespace v2 {
 						export class ComposeUiV2 {
 							public static readonly FEATURE: string;
-							public static readonly INSTANCE: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.v2.ComposeUiV2;
+							public static readonly INSTANCE: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.v2.ComposeUiV2;
 							public static readonly REQUIRED_HOST_VERSION_CODE: number;
 							public static readonly VERSION: number;
-							public static readonly catalog: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ComponentCatalog;
+							public static readonly catalog: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ComponentCatalog;
 							public static readonly componentNames: __javaLibraryRoots.javaRoot.util.Set<string>;
-							public static readonly interopCatalog: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.catalog.ComponentCatalog;
-							public validateNode(node: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.UiNode, parentType: string, checkParent: boolean): void;
-							public validateTree(tree: __javaLibraryRoots.orgRoot.autojs.plugin.compose.api.model.UiTree, allowDetachedRoot: boolean): void;
+							public static readonly interopCatalog: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.catalog.ComponentCatalog;
+							public validateNode(node: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.UiNode, parentType: string, checkParent: boolean): void;
+							public validateTree(tree: __javaLibraryRoots.orgRoot.ceenjs.plugin.compose.api.model.UiTree, allowDetachedRoot: boolean): void;
 							protected constructor();
 						}
 					}
@@ -14370,13 +14370,13 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace mlkit {
 				export namespace barcode {
 					export namespace api {
 						export class BarcodeResult {
-							public static readonly CREATOR: __javaLibraryRoots.androidRoot.os.Parcelable.Creator<__javaLibraryRoots.orgRoot.autojs.plugin.mlkit.barcode.api.BarcodeResult>;
+							public static readonly CREATOR: __javaLibraryRoots.androidRoot.os.Parcelable.Creator<__javaLibraryRoots.orgRoot.ceenjs.plugin.mlkit.barcode.api.BarcodeResult>;
 							public boundingBox: __javaLibraryRoots.androidRoot.graphics.Rect;
 							public cornerPoints: number[];
 							public displayValue: string;
@@ -14400,7 +14400,7 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace nodejs {
 				export namespace api {
@@ -14421,13 +14421,13 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace paddle {
 				export namespace ocr {
 					export namespace api {
 						export class OcrOptions {
-							public static readonly CREATOR: __javaLibraryRoots.androidRoot.os.Parcelable.Creator<__javaLibraryRoots.orgRoot.autojs.plugin.paddle.ocr.api.OcrOptions>;
+							public static readonly CREATOR: __javaLibraryRoots.androidRoot.os.Parcelable.Creator<__javaLibraryRoots.orgRoot.ceenjs.plugin.paddle.ocr.api.OcrOptions>;
 							public cpuThreadNum: number;
 							public detLongSize: number;
 							public extras: __javaLibraryRoots.androidRoot.os.Bundle;
@@ -14447,20 +14447,20 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace python {
 				export namespace runtime {
 					export namespace api {
-						export class PythonEntryMode extends __javaLibraryRoots.javaRoot.lang.Enum<__javaLibraryRoots.orgRoot.autojs.plugin.python.runtime.api.PythonEntryMode> {
-							public static readonly FILE: __javaLibraryRoots.orgRoot.autojs.plugin.python.runtime.api.PythonEntryMode;
-							public static readonly MODULE: __javaLibraryRoots.orgRoot.autojs.plugin.python.runtime.api.PythonEntryMode;
+						export class PythonEntryMode extends __javaLibraryRoots.javaRoot.lang.Enum<__javaLibraryRoots.orgRoot.ceenjs.plugin.python.runtime.api.PythonEntryMode> {
+							public static readonly FILE: __javaLibraryRoots.orgRoot.ceenjs.plugin.python.runtime.api.PythonEntryMode;
+							public static readonly MODULE: __javaLibraryRoots.orgRoot.ceenjs.plugin.python.runtime.api.PythonEntryMode;
 							public readonly wireCode: number;
-							public static readonly entries: __javaLibraryRoots.kotlinRoot.enums.EnumEntries<__javaLibraryRoots.orgRoot.autojs.plugin.python.runtime.api.PythonEntryMode>;
-							public static getEntries(): __javaLibraryRoots.kotlinRoot.enums.EnumEntries<__javaLibraryRoots.orgRoot.autojs.plugin.python.runtime.api.PythonEntryMode>;
+							public static readonly entries: __javaLibraryRoots.kotlinRoot.enums.EnumEntries<__javaLibraryRoots.orgRoot.ceenjs.plugin.python.runtime.api.PythonEntryMode>;
+							public static getEntries(): __javaLibraryRoots.kotlinRoot.enums.EnumEntries<__javaLibraryRoots.orgRoot.ceenjs.plugin.python.runtime.api.PythonEntryMode>;
 							public getWireCode(): number;
-							public static valueOf(value: string): __javaLibraryRoots.orgRoot.autojs.plugin.python.runtime.api.PythonEntryMode;
-							public static values(): __javaLibraryRoots.orgRoot.autojs.plugin.python.runtime.api.PythonEntryMode[];
+							public static valueOf(value: string): __javaLibraryRoots.orgRoot.ceenjs.plugin.python.runtime.api.PythonEntryMode;
+							public static values(): __javaLibraryRoots.orgRoot.ceenjs.plugin.python.runtime.api.PythonEntryMode[];
 							protected constructor();
 							public static valueOf(...args: any[]): any;
 						}
@@ -14471,20 +14471,20 @@ declare namespace org {
 	}
 }
 declare namespace org {
-	export namespace autojs {
+	export namespace ceenjs {
 		export namespace plugin {
 			export namespace python {
 				export namespace runtime {
 					export namespace api {
-						export class PythonExecutionMode extends __javaLibraryRoots.javaRoot.lang.Enum<__javaLibraryRoots.orgRoot.autojs.plugin.python.runtime.api.PythonExecutionMode> {
-							public static readonly BOUNDED: __javaLibraryRoots.orgRoot.autojs.plugin.python.runtime.api.PythonExecutionMode;
-							public static readonly LONG_RUNNING: __javaLibraryRoots.orgRoot.autojs.plugin.python.runtime.api.PythonExecutionMode;
+						export class PythonExecutionMode extends __javaLibraryRoots.javaRoot.lang.Enum<__javaLibraryRoots.orgRoot.ceenjs.plugin.python.runtime.api.PythonExecutionMode> {
+							public static readonly BOUNDED: __javaLibraryRoots.orgRoot.ceenjs.plugin.python.runtime.api.PythonExecutionMode;
+							public static readonly LONG_RUNNING: __javaLibraryRoots.orgRoot.ceenjs.plugin.python.runtime.api.PythonExecutionMode;
 							public readonly wireCode: number;
-							public static readonly entries: __javaLibraryRoots.kotlinRoot.enums.EnumEntries<__javaLibraryRoots.orgRoot.autojs.plugin.python.runtime.api.PythonExecutionMode>;
-							public static getEntries(): __javaLibraryRoots.kotlinRoot.enums.EnumEntries<__javaLibraryRoots.orgRoot.autojs.plugin.python.runtime.api.PythonExecutionMode>;
+							public static readonly entries: __javaLibraryRoots.kotlinRoot.enums.EnumEntries<__javaLibraryRoots.orgRoot.ceenjs.plugin.python.runtime.api.PythonExecutionMode>;
+							public static getEntries(): __javaLibraryRoots.kotlinRoot.enums.EnumEntries<__javaLibraryRoots.orgRoot.ceenjs.plugin.python.runtime.api.PythonExecutionMode>;
 							public getWireCode(): number;
-							public static valueOf(value: string): __javaLibraryRoots.orgRoot.autojs.plugin.python.runtime.api.PythonExecutionMode;
-							public static values(): __javaLibraryRoots.orgRoot.autojs.plugin.python.runtime.api.PythonExecutionMode[];
+							public static valueOf(value: string): __javaLibraryRoots.orgRoot.ceenjs.plugin.python.runtime.api.PythonExecutionMode;
+							public static values(): __javaLibraryRoots.orgRoot.ceenjs.plugin.python.runtime.api.PythonExecutionMode[];
 							protected constructor();
 							public static valueOf(...args: any[]): any;
 						}
@@ -25828,20 +25828,20 @@ declare namespace org {
 //net.lingala.zip4j.tasks.AbstractModifyFileTask:1
 //net.lingala.zip4j.tasks.AsyncZipTask:1
 //okio.internal.ZipFilesKt.buildIndex..inlined.sortedBy.1:1
-//org.autojs.plugin.jvmsource.api.JvmJsonArguments.Encoder.appendValue.lambda.2..inlined.sortedBy.1:1
-//org.autojs.plugin.jvmsource.api.JvmSourcePackageCodec.validateSources..inlined.sortedBy.1:1
-//org.autojs.plugin.packagearchive.AndroidPackageArchiveInspector.chooseBase..inlined.sortedBy.1:1
-//org.autojs.plugin.packagearchive.BundletoolTocDecoder.Toc.select..inlined.compareBy.1:1
-//org.autojs.plugin.packagearchive.BundletoolTocDecoder.Toc.select..inlined.thenBy.1:1
-//org.autojs.plugin.packagearchive.BundletoolTocDecoder.Toc.select..inlined.thenBy.2:1
-//org.autojs.plugin.packagearchive.BundletoolTocDecoder.Toc.select.lambda.16..inlined.sortedBy.1:1
-//org.autojs.plugin.packagearchive.BundletoolTocDecoder.Toc.selectSplitModules.lambda.0..inlined.compareByDescending.1:1
-//org.autojs.plugin.packagearchive.BundletoolTocDecoder.Toc.selectSplitModules.lambda.0..inlined.thenBy.1:1
-//org.autojs.plugin.packagearchive.BundletoolTocDecoder.Toc.selectStandaloneModules.lambda.0..inlined.compareByDescending.1:1
-//org.autojs.plugin.packagearchive.BundletoolTocDecoder.Toc.selectStandaloneModules.lambda.0..inlined.thenBy.1:1
-//org.autojs.plugin.packagearchive.BundletoolTocDecoder.ValueAlternatives:1
-//org.autojs.plugin.protocol.wire.TaggedWireWriter.encode..inlined.compareBy.1:1
-//org.autojs.plugin.protocol.wire.TaggedWireWriter.encode..inlined.thenBy.1:1
+//org.ceenjs.plugin.jvmsource.api.JvmJsonArguments.Encoder.appendValue.lambda.2..inlined.sortedBy.1:1
+//org.ceenjs.plugin.jvmsource.api.JvmSourcePackageCodec.validateSources..inlined.sortedBy.1:1
+//org.ceenjs.plugin.packagearchive.AndroidPackageArchiveInspector.chooseBase..inlined.sortedBy.1:1
+//org.ceenjs.plugin.packagearchive.BundletoolTocDecoder.Toc.select..inlined.compareBy.1:1
+//org.ceenjs.plugin.packagearchive.BundletoolTocDecoder.Toc.select..inlined.thenBy.1:1
+//org.ceenjs.plugin.packagearchive.BundletoolTocDecoder.Toc.select..inlined.thenBy.2:1
+//org.ceenjs.plugin.packagearchive.BundletoolTocDecoder.Toc.select.lambda.16..inlined.sortedBy.1:1
+//org.ceenjs.plugin.packagearchive.BundletoolTocDecoder.Toc.selectSplitModules.lambda.0..inlined.compareByDescending.1:1
+//org.ceenjs.plugin.packagearchive.BundletoolTocDecoder.Toc.selectSplitModules.lambda.0..inlined.thenBy.1:1
+//org.ceenjs.plugin.packagearchive.BundletoolTocDecoder.Toc.selectStandaloneModules.lambda.0..inlined.compareByDescending.1:1
+//org.ceenjs.plugin.packagearchive.BundletoolTocDecoder.Toc.selectStandaloneModules.lambda.0..inlined.thenBy.1:1
+//org.ceenjs.plugin.packagearchive.BundletoolTocDecoder.ValueAlternatives:1
+//org.ceenjs.plugin.protocol.wire.TaggedWireWriter.encode..inlined.compareBy.1:1
+//org.ceenjs.plugin.protocol.wire.TaggedWireWriter.encode..inlined.thenBy.1:1
 //org.jdeferred.AlwaysCallback:2
 //org.jdeferred.Deferred:3
 //org.jdeferred.DeferredCallable:2

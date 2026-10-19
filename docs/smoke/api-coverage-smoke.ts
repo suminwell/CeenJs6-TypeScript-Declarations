@@ -1,4 +1,4 @@
-/// <reference path="../../declarations/autojs6/index.d.ts" />
+/// <reference path="../../declarations/ceenjs6/index.d.ts" />
 
 // Compile only. No Android API or external service is executed.
 type CoverageIsAny<T> = 0 extends 1 & T ? true : false;
@@ -155,7 +155,7 @@ const previewName: string = files.batchRename.preview('IMG_1.JPG', { search: 'IM
 const previewNames: string[] = files.batchRename.preview(['a.txt', { name: 'Album', isDirectory: true, lastModified: new Date() }], { search: '', pinyin: true, pinyinTone: 'mark', pinyinSeparator: 'hyphen', pinyinCase: 'capitalize', pinyinInitials: false }).map(it => it.newName);
 const previewAsyncReason: Promise<string | null> = files.batchRename.previewAsync('a.txt', { search: 'a' }).then(it => it.reason);
 const presetNames: string[] = files.batchRename.presets().map(preset => preset.name + preset.options.replace);
-const importedPresets: string[] = files.batchRename.importPresets({ format: 'autojs6-batch-rename-presets', version: 1, presets: [{ name: 'p', options: { search: '^', regex: true } }] }, { onConflict: 'rename' }).imported;
+const importedPresets: string[] = files.batchRename.importPresets({ format: 'ceenjs6-batch-rename-presets', version: 1, presets: [{ name: 'p', options: { search: '^', regex: true } }] }, { onConflict: 'rename' }).imported;
 const rejectedPresetIndex: Promise<number> = files.batchRename.importPresetsAsync('{}').then(result => result.rejected[0].index);
 const presetsLater: Promise<number> = files.batchRename.presetsAsync().then(presets => presets.length);
 const historyDeleted: boolean = files.batchRename.deleteHistory(files.batchRename.history()[0]);
@@ -164,7 +164,7 @@ const historyCleared: number = files.batchRename.clearHistory({ source: 'explore
 files.batchRename.importPresets('{}', { onConflict: 'merge' });
 // @ts-expect-error Unknown history sources are rejected.
 files.batchRename.clearHistory({ source: 'plugin' });
-// plugins.tools: the tools AutoJs6 plugins describe themselves.
+// plugins.tools: the tools CeenJs6 plugins describe themselves.
 const pluginToolNames: string[] = plugins.tools.list().filter(tool => tool.risk === 'readonly').map(tool => tool.name);
 const pluginToolProvider: string | undefined = plugins.tools.providers().find(provider => provider.status !== 'available')?.detail;
 const pluginToolText: string = plugins.tools.call('opencc_convert', { text: 'abc' }).result.text;

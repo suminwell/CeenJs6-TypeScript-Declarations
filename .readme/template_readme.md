@@ -9,23 +9,15 @@
 <!--suppress HtmlDeprecatedAttribute, HttpUrlsUsage -->
 
 <div align="center">
-  <p>
-    <img src="https://s1.imagehub.cc/images/2023/03/24/c5f6f649b6ed3aae341966a92fca2747.md.png" alt="autojs6-ts-declarations-banner_1024×310" border="0" width="496" />
-  </p>
-
   <p>{{ dts000 }}</p>
-  <p>TypeScript Declarations for AutoJs6</p>
+  <p>TypeScript Declarations for CeenJs6</p>
 
   <p>
-    <a href="http://dts-project.autojs6.com/blob/main/package.json"><img alt="Version name" src="https://img.shields.io/badge/dynamic/json?color=534BAE&label=version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2FSuperMonster003%2FAutoJs6-TypeScript-Declarations%2Fmaster%2Fpackage.json"/></a>
-    <a href="http://dts-issues.autojs6.com"><img alt="GitHub issues" src="https://img.shields.io/github/issues/SuperMonster003/AutoJs6-TypeScript-Declarations?color=009688"/></a>
-    <a href="http://project.autojs6.com"><img alt="GitHub AutoJs6 repository" src="https://img.shields.io/badge/autojs6->=6.8.0-388E3C"/></a>
-    <a href="https://github.com/topics/javascript"><img alt="GitHub top language" src="https://img.shields.io/github/languages/top/SuperMonster003/AutoJs6-TypeScript-Declarations?color=3178C6"/></a>
-   <br>
-    <a href="https://github.com/SuperMonster003/AutoJs6-TypeScript-Declarations/commit/f8250babdb161e12ad2e14c73e8aa2b5d7d89cbc"><img alt="Created" src="https://img.shields.io/date/1635813883?color=C56000&label=created"/></a>
-    <a href="https://github.com/SuperMonster003/AutoJs6-TypeScript-Declarations/blob/main/LICENSE"><img alt="GitHub License" src="https://img.shields.io/github/license/SuperMonster003/AutoJs6-TypeScript-Declarations?color=C63F17"/></a>
-    <a href="https://github.com/SuperMonster003/AutoJs6-TypeScript-Declarations/find/master"><img alt="GitHub Code Size" src="https://img.shields.io/github/languages/code-size/SuperMonster003/AutoJs6-TypeScript-Declarations?color=795548"/></a>
-    <a href="https://www.jetbrains.com/?from=AutoJs6-TypeScript-Declarations"><img alt="JetBrains supporter" src="https://img.shields.io/badge/supporter-JetBrains-ee4677"/></a>
+    <a href="{{ repo_url }}/blob/{{ repo_branch }}/package.json"><img alt="Version" src="https://img.shields.io/badge/dynamic/json?color=534BAE&label=version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fsuminwell%2FCeenJs6-TypeScript-Declarations%2Fceen%2Fpackage.json"/></a>
+    <a href="{{ repo_url }}/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/suminwell/CeenJs6-TypeScript-Declarations?color=009688"/></a>
+    <a href="{{ host_url }}"><img alt="CeenJs6" src="https://img.shields.io/badge/host-CeenJs6-388E3C"/></a>
+    <a href="{{ repo_url }}/actions"><img alt="Checks and release" src="https://github.com/suminwell/CeenJs6-TypeScript-Declarations/actions/workflows/release.yml/badge.svg?branch=ceen"/></a>
+    <a href="{{ repo_url }}/blob/{{ repo_branch }}/LICENSE"><img alt="License" src="https://img.shields.io/github/license/suminwell/CeenJs6-TypeScript-Declarations?color=C63F17"/></a>
   </p>
 </div>
 
@@ -46,12 +38,11 @@
 
 ******
 
-<details><summary>{{ dts006 }}</summary>
-   <div align="center">
-      <br>
-      <img src="https://s1.imagehub.cc/images/2023/03/24/3bbae966e4c0cbe611de7cf9dffb8150.gif" alt="autojs6-ts-declarations-demo" border="0"/>
-   </div>
-</details>
+```javascript
+console.log(ceenjs.versionName);
+console.log(ceenjs.packageName); // org.ceenjs.ceenjs6
+const host = app.ceenjs;
+```
 
 ******
 
@@ -66,7 +57,7 @@
 ##### {{ dts010 }}
 
 ```shell
-npm i @sm003/autojs6-dts
+npm i {{ package_name }}
 ```
 
 {{ dts011 }}
@@ -110,7 +101,7 @@ npm i @sm003/autojs6-dts
 
 {{ dts026 }}
 
-> hello / node_modules / @sm003 / autojs6-dts / ...
+> hello / node_modules / ceenjs6 / ...
 > hello / jsconfig.json
 > hello / main.js
 > ... ...
@@ -120,11 +111,20 @@ npm i @sm003/autojs6-dts
 ```json
 {
   "compilerOptions": {
+    "target": "ES2020",
+    "lib": ["ES2020"],
+    "skipLibCheck": true,
+    "types": ["ceenjs6"],
     "typeRoots": [
-      "./node_modules/@sm003/autojs6-dts/declarations",
+      "./node_modules/ceenjs6/declarations",
       "./declarations"
     ]
-  }
+  },
+  "exclude": [
+    "node_modules",
+    "**/cj6-jsox-extensions.d.ts",
+    "**/cj6-jsox-*-extensions.d.ts"
+  ]
 }
 ```
 
@@ -135,7 +135,7 @@ npm i @sm003/autojs6-dts
 {{ dts034 }}
 
 ```typescript
-/// <reference path="./declarations/autojs6/aj6-jsox-extensions.d.ts" />
+/// <reference path="./declarations/ceenjs6/cj6-jsox-extensions.d.ts" />
 jsox.extendAll();
 const values = [1, 2, 2].distinct();
 const parsed = Number.parseFloat('ff', 16);
@@ -152,7 +152,7 @@ const parsed = Number.parseFloat('ff', 16);
 {{ dts030 }}
 
 ```shell
-npm update @sm003/autojs6-dts
+npm update {{ package_name }}
 ```
 
 {{ dts031 }}
@@ -176,3 +176,11 @@ python .python/generate_markdown.py
 python .python/generate_markdown.py --check
 python -m unittest discover -s .python/tests
 ```
+
+## Release / npm
+
+[GitHub Releases]({{ repo_url }}/releases) / [Compatibility]({{ repo_url }}/blob/{{ repo_branch }}/docs/COMPATIBILITY.md) / [Publishing]({{ repo_url }}/blob/{{ repo_branch }}/docs/RELEASING.md)
+
+## Credits
+
+Derived from [AutoJs6 TypeScript Declarations](https://github.com/SuperMonster003/AutoJs6-TypeScript-Declarations) by SuperMonster003, under MPL-2.0. Releases through v4.42.0 in the changelog are inherited upstream history. CeenJs6 maintenance starts at v5.0.0; see [NOTICE]({{ repo_url }}/blob/{{ repo_branch }}/NOTICE).

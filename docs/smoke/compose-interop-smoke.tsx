@@ -1,6 +1,6 @@
-/// <reference path="../../declarations/autojs6/index.d.ts" />
-/** @jsx __autojs6Tsx */
-/** @jsxFrag __autojs6TsxFragment */
+/// <reference path="../../declarations/ceenjs6/index.d.ts" />
+/** @jsx __ceenjs6Tsx */
+/** @jsxFrag __ceenjs6TsxFragment */
 
 // Compile-only corpus for the matching F2 host and AndroidView interop feature.
 // Negative examples are intentional; do not execute this file.

@@ -1,4 +1,4 @@
-/// <reference path="../../declarations/autojs6/index.d.ts" />
+/// <reference path="../../declarations/ceenjs6/index.d.ts" />
 
 // Run with tsc --noEmit --strictNullChecks --skipLibCheck --target ES2020 --lib ES2020.
 ocr.mode = 'auto';
@@ -14,7 +14,7 @@ ocr.tap(ocr.rapid);
 
 let resolvedOcrMode: '' | 'mlkit' | 'paddle' | 'rapid' = ocr.mode;
 let automaticallyRecognized: string[] = ocr({mode: null});
-let automaticallyDetected: org.autojs.autojs.runtime.api.OcrResult[] = ocr.detect({mode: undefined});
+let automaticallyDetected: org.ceenjs.ceenjs.runtime.api.OcrResult[] = ocr.detect({mode: undefined});
 let filteredRecognition: string[] = ocr({mode: 'auto', engine: 'paddle-ocr', variant: 'v4'});
 
 // @ts-expect-error A getter exposes a concrete engine or empty string, never the auto selector.

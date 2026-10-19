@@ -1,4 +1,4 @@
-/// <reference path="../../declarations/autojs6/index.d.ts" />
+/// <reference path="../../declarations/ceenjs6/index.d.ts" />
 
 let assistant = ai.agent.create({ tools: ['user'], interaction: 'script', budget: { maxSteps: 6 } });
 let task: Internal.Ai.AgentRun = assistant.run('Ask for a display name.');

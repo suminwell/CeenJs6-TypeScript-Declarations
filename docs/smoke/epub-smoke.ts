@@ -1,4 +1,4 @@
-/// <reference path="../../declarations/autojs6/index.d.ts" />
+/// <reference path="../../declarations/ceenjs6/index.d.ts" />
 
 // Run with tsc --noEmit --strictNullChecks --skipLibCheck --target ES2020 --lib ES2020.
 

@@ -1,5 +1,7 @@
 {
-  "project_name": "AutoJs6 TypeScript Declarations",
-  "repo_url": "https://github.com/SuperMonster003/AutoJs6-TypeScript-Declarations",
-  "repo_branch": "main"
+  "project_name": "CeenJs6 TypeScript Declarations",
+  "repo_url": "https://github.com/suminwell/CeenJs6-TypeScript-Declarations",
+  "repo_branch": "ceen",
+  "package_name": "ceenjs6",
+  "host_url": "https://github.com/suminwell/CeenJs6"
 }

@@ -8,7 +8,7 @@ assert.equal(process.argv[2], "--typescript");
 const require = createRequire(import.meta.url);
 const ts = require(resolve(process.argv[3]));
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const declaration = resolve(root, "declarations/autojs6/aj6-int-compose.d.ts");
+const declaration = resolve(root, "declarations/ceenjs6/cj6-int-compose.d.ts");
 const options = {strict: true, exactOptionalPropertyTypes: true, skipLibCheck: false, noEmit: true,
     target: ts.ScriptTarget.ES2018, types: [], lib: ["lib.es2018.d.ts"]};
 if (Number(ts.versionMajorMinor.split(".")[0]) >= 6) options.ignoreDeprecations = "6.0";

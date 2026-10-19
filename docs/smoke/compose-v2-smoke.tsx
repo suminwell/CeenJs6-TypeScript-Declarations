@@ -1,6 +1,6 @@
-/// <reference path="../../declarations/autojs6/index.d.ts" />
-/** @jsx __autojs6Tsx */
-/** @jsxFrag __autojs6TsxFragment */
+/// <reference path="../../declarations/ceenjs6/index.d.ts" />
+/** @jsx __ceenjs6Tsx */
+/** @jsxFrag __ceenjs6TsxFragment */
 
 // Compile-only F4 corpus. Negative directives are intentional; do not execute.
 export {};

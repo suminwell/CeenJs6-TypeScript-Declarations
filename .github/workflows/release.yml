@@ -1,0 +1,155 @@
+name: CeenJs6 checks and release
+
+on:
+  push:
+    branches: [ceen]
+    tags: ['v*']
+  pull_request:
+    branches: [ceen]
+  workflow_dispatch:
+    inputs:
+      publish_npm:
+        description: Publish the checked release to npm (requires npm authentication)
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ceenjs6-declarations-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      NODE_OPTIONS: --max-old-space-size=4096
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+      tag: ${{ steps.version.outputs.tag }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - name: Install pinned compiler
+        run: npm install --ignore-scripts --no-package-lock --no-audit --no-fund
+      - name: Check generated documentation
+        run: npm run docs:check
+      - name: Test documentation generation
+        run: npm run docs:test
+      - name: Check APIs, TSX, completion and real consumers
+        run: npm test
+      - name: Prepare and verify npm and standalone packages
+        run: npm run release:prepare
+      - name: Record version
+        id: version
+        shell: bash
+        run: |
+          version=$(node -p "require('./package.json').version")
+          printf 'version=%s\ntag=v%s\n' "$version" "$version" >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ceenjs6-release
+          path: dist/
+          if-no-files-found: error
+          retention-days: 14
+
+  release:
+    needs: check
+    if: github.event_name != 'pull_request' && (github.ref == 'refs/heads/ceen' || startsWith(github.ref, 'refs/tags/v'))
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    outputs:
+      available: ${{ steps.release.outputs.available }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/download-artifact@v4
+        with:
+          name: ceenjs6-release
+          path: dist
+      - name: Verify release checksums
+        working-directory: dist
+        run: sha256sum --check SHA256SUMS
+      - name: Publish GitHub Release
+        id: release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_TAG: ${{ needs.check.outputs.tag }}
+          RELEASE_VERSION: ${{ needs.check.outputs.version }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git rev-parse --verify --quiet "refs/tags/$RELEASE_TAG" >/dev/null; then
+            tagged_commit=$(git rev-list -n 1 "$RELEASE_TAG")
+            if [ "$tagged_commit" != "$GITHUB_SHA" ]; then
+              echo 'available=false' >> "$GITHUB_OUTPUT"
+              echo "Version $RELEASE_VERSION already belongs to $tagged_commit; bump package.json and the changelogs to release another version." >> "$GITHUB_STEP_SUMMARY"
+              exit 0
+            fi
+          fi
+          if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
+            gh release upload "$RELEASE_TAG" \
+              "dist/ceenjs6-$RELEASE_VERSION.tgz" "dist/ceenjs6-$RELEASE_VERSION.zip" \
+              dist/release-metadata.json dist/SHA256SUMS --clobber
+          else
+            gh release create "$RELEASE_TAG" \
+              "dist/ceenjs6-$RELEASE_VERSION.tgz" "dist/ceenjs6-$RELEASE_VERSION.zip" \
+              dist/release-metadata.json dist/SHA256SUMS \
+              --target "$GITHUB_SHA" --title "CeenJs6 declarations $RELEASE_VERSION" \
+              --notes-file dist/release-notes.md --latest
+          fi
+          echo 'available=true' >> "$GITHUB_OUTPUT"
+          echo "Release: https://github.com/$GITHUB_REPOSITORY/releases/tag/$RELEASE_TAG" >> "$GITHUB_STEP_SUMMARY"
+          echo 'npm publication is a separate job and requires configured npm authentication.' >> "$GITHUB_STEP_SUMMARY"
+
+  npm:
+    needs: [check, release]
+    if: needs.release.outputs.available == 'true' && (inputs.publish_npm == true || vars.NPM_PUBLISH_ENABLED == 'true')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      id-token: write
+    env:
+      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      NPM_TRUSTED_PUBLISHER: ${{ vars.NPM_TRUSTED_PUBLISHER }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+          registry-url: https://registry.npmjs.org
+      - uses: actions/download-artifact@v4
+        with:
+          name: ceenjs6-release
+          path: dist
+      - name: Verify release checksums
+        working-directory: dist
+        run: sha256sum --check SHA256SUMS
+      - name: Update npm for trusted publishing
+        run: npm install --global npm@11 --ignore-scripts --no-audit --no-fund
+      - name: Publish the verified tarball
+        env:
+          RELEASE_VERSION: ${{ needs.check.outputs.version }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "$NODE_AUTH_TOKEN" ] && [ "$NPM_TRUSTED_PUBLISHER" != 'true' ]; then
+            echo 'Configure an npm trusted publisher or the NPM_TOKEN repository secret.' >&2
+            exit 1
+          fi
+          if [ "$NPM_TRUSTED_PUBLISHER" = 'true' ]; then
+            unset NODE_AUTH_TOKEN
+          fi
+          node tools/publish-npm.mjs

@@ -1,14 +1,19 @@
-# AutoJs6 Declaration Sync Roadmap
+# CeenJs6 Declaration Sync Roadmap
+
+This roadmap is inherited upstream history through 4.42.0. Historical source
+commits and verification results refer to the upstream AutoJs6 project. Paths
+and commands have been renamed for CeenJs6; see COMPATIBILITY.md for the current
+host baseline and RELEASING.md for the maintained validation/release process.
 
 Last updated: 2026-07-27
 
-This roadmap tracks the work needed to synchronize this repository with the AutoJs6 runtime APIs under:
+This roadmap tracks the work needed to synchronize this repository with the CeenJs6 runtime APIs under:
 
 ```text
-app/src/main/java/org/autojs/autojs/runtime/api/augment
+app/src/main/java/org/ceenjs/ceenjs/runtime/api/augment
 ```
 
-The current cycle synchronizes declarations with AutoJs6 `6.8.0 Alpha7` at source commit `fe4340faee934c7189e5d5d776f67ab7a636b4dd`. Hand-authored declarations are retained unless a source audit proves that an API is unreachable. Generator-owned shards may be consolidated when the regenerated bundle supersedes them.
+The current cycle synchronizes declarations with CeenJs6 `6.8.0 Alpha7` at source commit `fe4340faee934c7189e5d5d776f67ab7a636b4dd`. Hand-authored declarations are retained unless a source audit proves that an API is unreachable. Generator-owned shards may be consolidated when the regenerated bundle supersedes them.
 
 ## Source Of Truth
 
@@ -28,8 +33,8 @@ Use these sources in order when updating declarations:
 - Separate owned Kotlin `augment` APIs from legacy prototype APIs in comments and structure.
 - Global constructor names are case-sensitive. `Canvas`, `Color`, `WebSocket`, and `RootAutomator` are constructor globals, not lowercase module globals.
 - Lowercase module globals that use `$` aliases must declare both forms, for example `zip` and `$zip`.
-- Every new module declaration must be referenced by `declarations/autojs6/index.d.ts`.
-- Every runtime global must be declared in `aj6-int-init.d.ts` or in a module file that is already referenced by `index.d.ts`.
+- Every new module declaration must be referenced by `declarations/ceenjs6/index.d.ts`.
+- Every runtime global must be declared in `cj6-int-init.d.ts` or in a module file that is already referenced by `index.d.ts`.
 
 ## Phase 0: Baseline Inventory And Validation
 
@@ -46,7 +51,7 @@ Tasks:
 - [ ] Create or maintain a local API sync matrix for all `augment` registrations.
 - [ ] Mark modules as `current`, `partial`, `missing`, or `legacy/assets`.
 - [ ] Add representative TypeScript smoke files or a compile-only validation workflow.
-- [x] Check whether generated Java declarations such as `aj6-main-app.d.ts` need a full regeneration later.
+- [x] Check whether generated Java declarations such as `cj6-main-app.d.ts` need a full regeneration later.
 
 Acceptance:
 
@@ -65,7 +70,7 @@ Goals:
 
 Required updates:
 
-- [x] Add `aj6-int-pinyin.d.ts` to `index.d.ts`; the file exists but is not currently referenced.
+- [x] Add `cj6-int-pinyin.d.ts` to `index.d.ts`; the file exists but is not currently referenced.
 - [x] Add global aliases for `keys` and `$keys`.
 - [x] Add `jsox` and `$jsox`.
 - [x] Add `cvt` and `$cvt`.
@@ -90,7 +95,7 @@ Status: completed
 
 Scope:
 
-- `declarations/autojs6/aj6-int-colors.d.ts`
+- `declarations/ceenjs6/cj6-int-colors.d.ts`
 - `augment/colors/Colors.kt`
 - `augment/colors/Color.kt`
 - `augment/colors/ColorNativeObject.kt`
@@ -126,21 +131,21 @@ Create or complete declaration files for modules that are present in runtime but
 
 Modules:
 
-- [x] `aj6-int-converter.d.ts`: `cvt`, `cvt.bytes`, `cvt.bytes.strict`, `cvt.bytes.loose`, byte units/constants.
-- [x] `aj6-int-formatter.d.ts`: `fmt`, `fmt.bytes`, `fmt.bytes.strict`, `fmt.bytes.loose`, byte formatting options.
-- [x] `aj6-int-sysprops.d.ts`: callable `sysprops`, `get`, `getInt`, `getBoolean`, `getAll`, filters.
-- [x] `aj6-int-zip.d.ts`: callable `zip`, `open`, `zipFile`, `zipDir`, `zipFiles`, `unzip`, `ZipNativeObject`.
-- [x] `aj6-int-nanoid.d.ts`: callable `nanoid(size?)`.
-- [x] `aj6-int-mediainfo.d.ts`: callable `mediainfo(path)`, `read(path)`, media info result object.
-- [x] `aj6-int-pinyin4j.d.ts`: callable `pinyin4j`, `of`, `as`, option aliases.
-- [x] `aj6-int-jsox.d.ts`: callable `jsox`, `extend`, `extendAll`.
-- [x] Keep Canvas constructor declarations in `aj6-int-init.d.ts`; no separate `aj6-int-canvas.d.ts` is needed for this pass.
+- [x] `cj6-int-converter.d.ts`: `cvt`, `cvt.bytes`, `cvt.bytes.strict`, `cvt.bytes.loose`, byte units/constants.
+- [x] `cj6-int-formatter.d.ts`: `fmt`, `fmt.bytes`, `fmt.bytes.strict`, `fmt.bytes.loose`, byte formatting options.
+- [x] `cj6-int-sysprops.d.ts`: callable `sysprops`, `get`, `getInt`, `getBoolean`, `getAll`, filters.
+- [x] `cj6-int-zip.d.ts`: callable `zip`, `open`, `zipFile`, `zipDir`, `zipFiles`, `unzip`, `ZipNativeObject`.
+- [x] `cj6-int-nanoid.d.ts`: callable `nanoid(size?)`.
+- [x] `cj6-int-mediainfo.d.ts`: callable `mediainfo(path)`, `read(path)`, media info result object.
+- [x] `cj6-int-pinyin4j.d.ts`: callable `pinyin4j`, `of`, `as`, option aliases.
+- [x] `cj6-int-jsox.d.ts`: callable `jsox`, `extend`, `extendAll`.
+- [x] Keep Canvas constructor declarations in `cj6-int-init.d.ts`; no separate `cj6-int-canvas.d.ts` is needed for this pass.
 
 Acceptance:
 
 - Each file has a Kotlin source pointer.
 - Each file is referenced by `index.d.ts`.
-- Each global and `$` alias is wired in `aj6-int-init.d.ts` where applicable.
+- Each global and `$` alias is wired in `cj6-int-init.d.ts` where applicable.
 - Callable objects use callable interfaces instead of plain classes.
 
 ## Phase 4: Existing Kotlin-Augment Modules
@@ -216,35 +221,35 @@ Status: completed
 
 Scope:
 
-- `aj6-main-app.d.ts`
+- `cj6-main-app.d.ts`
 - Android framework declarations
 - Bundled library declarations
 - Plugin and third-party module declarations
 
 Tasks:
 
-- [x] Compare generated Java declarations against the current AutoJs6 build output if a generator is available.
-- [x] Refresh external library versions only after confirming local AutoJs6 dependency versions.
+- [x] Compare generated Java declarations against the current CeenJs6 build output if a generator is available.
+- [x] Refresh external library versions only after confirming local CeenJs6 dependency versions.
 - [x] Keep non-augment modules such as `i18n`, `jvm-npm`, observe polyfills, plugins, and custom mods unless a separate audit changes their status.
 
 Generation notes:
 
-- `aj6-main-app.d.ts` is generated from AutoJs6 compile output with `dts-generator.jar`; it is preserved as an IDE-completion source rather than a hand-maintained TypeScript-clean declaration.
+- `cj6-main-app.d.ts` is generated from CeenJs6 compile output with `dts-generator.jar`; it is preserved as an IDE-completion source rather than a hand-maintained TypeScript-clean declaration.
 - Generated Java declarations are validated as a bundle. Semantic Java shape conflicts may require `skipLibCheck`, but parser failures are not accepted as expected output.
-- Regeneration currently also refreshes `declarations/android.d.ts`, `declarations/libraries.d.ts`, and generated resource declarations such as `aj6-resources.d.ts`.
-- Syntax validation includes `aj6-main-app.d.ts` together with the generated support files.
+- Regeneration currently also refreshes `declarations/android.d.ts`, `declarations/libraries.d.ts`, and generated resource declarations such as `cj6-resources.d.ts`.
+- Syntax validation includes `cj6-main-app.d.ts` together with the generated support files.
 
 Progress:
 
-- 2026-06-15: Confirmed the local `dts-generator.jar` pipeline and current AutoJs6 compile JAR are available; current `aj6-main-app.d.ts` is newer than the local `classes.jar` output and is treated as generated.
-- 2026-06-15: Ran a scoped syntax check for generated support declarations excluding `aj6-main-app.d.ts`: `android.d.ts`, `libraries.d.ts`, `aj6-resources.d.ts`, `aj6-gradle-wrapper.d.ts`, `aj6-int-jvm-npm.d.ts`, and `aj6-declarations.d.ts`.
-- 2026-07-27: Regenerated declarations were consolidated into `android.d.ts`, `libraries.d.ts`, `aj6-main-app.d.ts`, and `aj6-resources.d.ts`; the canonical declaration entry now passes the compile-only syntax gate with `skipLibCheck`.
+- 2026-06-15: Confirmed the local `dts-generator.jar` pipeline and current CeenJs6 compile JAR are available; current `cj6-main-app.d.ts` is newer than the local `classes.jar` output and is treated as generated.
+- 2026-06-15: Ran a scoped syntax check for generated support declarations excluding `cj6-main-app.d.ts`: `android.d.ts`, `libraries.d.ts`, `cj6-resources.d.ts`, `cj6-gradle-wrapper.d.ts`, `cj6-int-jvm-npm.d.ts`, and `cj6-declarations.d.ts`.
+- 2026-07-27: Regenerated declarations were consolidated into `android.d.ts`, `libraries.d.ts`, `cj6-main-app.d.ts`, and `cj6-resources.d.ts`; the canonical declaration entry now passes the compile-only syntax gate with `skipLibCheck`.
 
 Acceptance:
 
 - Java/Kotlin class declarations are not mixed with runtime module declarations unless intentionally exposed globally.
 - Dependency version changes are recorded in `CHANGELOG.md` only at release time.
-- `aj6-main-app.d.ts` is regenerated, not manually patched for generator syntax issues.
+- `cj6-main-app.d.ts` is regenerated, not manually patched for generator syntax issues.
 
 ## Phase 7: Verification And Release Preparation
 
@@ -252,7 +257,7 @@ Status: in_progress
 
 Verification:
 
-- [x] Run the chosen TypeScript validation command, excluding `aj6-main-app.d.ts` unless generator fixes are in scope.
+- [x] Run the chosen TypeScript validation command, excluding `cj6-main-app.d.ts` unless generator fixes are in scope.
 - [x] Add smoke samples for key globals: `colors`, `Color`, `Canvas`, `zip`, `sysprops`, `nanoid`, `pinyin4j`, `cvt`, `fmt`, `jsox`.
 - [x] Check that `index.d.ts` can be consumed from a fresh project.
 - [ ] Check that WebStorm/TypeScript completion sees newly added globals.
@@ -260,16 +265,16 @@ Verification:
 Progress:
 
 - 2026-06-15: Added `docs/smoke/key-globals-smoke.ts` covering the key globals listed above.
-- 2026-06-15: Ran the smoke validation command with explicit declaration inputs and without `aj6-main-app.d.ts`.
-- 2026-06-15: Attempted a fresh TypeScript project under `.test/fresh-index-consumption` that references `declarations/autojs6/index.d.ts`; TypeScript 5.1.3 currently stops on parser errors from generated declarations (`aj6-main-app.d.ts` and generated library shards), so index-level CLI consumption remains blocked by generated artifacts and should be treated as an IDE/manual completion check unless generator output is repaired or a clean CLI bundle is introduced.
+- 2026-06-15: Ran the smoke validation command with explicit declaration inputs and without `cj6-main-app.d.ts`.
+- 2026-06-15: Attempted a fresh TypeScript project under `.test/fresh-index-consumption` that references `declarations/ceenjs6/index.d.ts`; TypeScript 5.1.3 currently stops on parser errors from generated declarations (`cj6-main-app.d.ts` and generated library shards), so index-level CLI consumption remains blocked by generated artifacts and should be treated as an IDE/manual completion check unless generator output is repaired or a clean CLI bundle is introduced.
 - 2026-06-15: Chose `v3.0.0` for the release because the sync spans new modules, existing module contracts, entry points, and regenerated Android/library declarations; updated `package.json`, README version history, and `docs/CHANGELOG.md`.
 - 2026-06-15: Verified npm package contents with `npm pack --dry-run --json`; package resolves as `@sm003/autojs6-dts@3.0.0`, includes core declarations and release docs, and excludes internal roadmap/smoke artifacts.
-- 2026-07-27: The regenerated bundle removed the previous parser blockers. The canonical `declarations/autojs6/index.d.ts` entry and the latest augment smoke sample now compile together with TypeScript 5.1.3 and `skipLibCheck`.
+- 2026-07-27: The regenerated bundle removed the previous parser blockers. The canonical `declarations/ceenjs6/index.d.ts` entry and the latest augment smoke sample now compile together with TypeScript 5.1.3 and `skipLibCheck`.
 
 Validation command:
 
 ```shell
-cmd /c tsc --noEmit --pretty false --skipLibCheck true --target ES2020 --lib ES2020 declarations/autojs6/index.d.ts docs/smoke/key-globals-smoke.ts docs/smoke/latest-augment-smoke.ts
+cmd /c tsc --noEmit --pretty false --skipLibCheck true --target ES2020 --lib ES2020 declarations/ceenjs6/index.d.ts docs/smoke/key-globals-smoke.ts docs/smoke/latest-augment-smoke.ts
 ```
 
 Fresh project probe used during verification; the temporary project directory was removed after the check:
@@ -285,7 +290,7 @@ Release preparation:
 - [x] Add `docs/CHANGELOG.md` release entry.
 - [x] Package and verify npm contents.
 
-## Phase 8: AutoJs6 6.8.0 Alpha7 Augment Sync
+## Phase 8: CeenJs6 6.8.0 Alpha7 Augment Sync
 
 Status: completed
 
@@ -320,12 +325,12 @@ Validation results:
 - All 120 non-assignment top-level mount names have matching declarations.
 - Both smoke samples and the canonical declaration entry compile with TypeScript 5.1.3 and `skipLibCheck`.
 - All 148 triple-slash references resolve to existing files.
-- `npm pack --dry-run --json` reports 80 package files for `@sm003/autojs6-dts@4.0.0`, including all new modules, the canonical type entry, and `aj6-resources.d.ts`.
+- `npm pack --dry-run --json` reports 80 package files for `@sm003/autojs6-dts@4.0.0`, including all new modules, the canonical type entry, and `cj6-resources.d.ts`.
 
 Release note:
 
-- This source sync is prepared as `v4.0.0`, named "AutoJs6 6.8.0 Alpha7 声明同步与生成声明整合".
-- The major version records the removal of legacy declaration entry points and generated dependency shards. The canonical package entry is `declarations/autojs6/index.d.ts`.
+- This source sync is prepared as `v4.0.0`, named "CeenJs6 6.8.0 Alpha7 声明同步与生成声明整合".
+- The major version records the removal of legacy declaration entry points and generated dependency shards. The canonical package entry is `declarations/ceenjs6/index.d.ts`.
 
 ## Per-Module Update Template
 

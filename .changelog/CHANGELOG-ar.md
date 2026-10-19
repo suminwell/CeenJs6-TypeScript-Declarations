@@ -2,16 +2,26 @@
 
 ### سجل التغييرات
 
-- [简体中文 [zh-Hans]](https://github.com/SuperMonster003/AutoJs6-TypeScript-Declarations/blob/main/.changelog/CHANGELOG-zh-Hans.md)
-- [繁體中文 (香港) [zh-Hant-HK]](https://github.com/SuperMonster003/AutoJs6-TypeScript-Declarations/blob/main/.changelog/CHANGELOG-zh-Hant-HK.md)
-- [繁體中文 (台灣) [zh-Hant-TW]](https://github.com/SuperMonster003/AutoJs6-TypeScript-Declarations/blob/main/.changelog/CHANGELOG-zh-Hant-TW.md)
-- [English [en]](https://github.com/SuperMonster003/AutoJs6-TypeScript-Declarations/blob/main/.changelog/CHANGELOG-en.md)
-- [Français [fr]](https://github.com/SuperMonster003/AutoJs6-TypeScript-Declarations/blob/main/.changelog/CHANGELOG-fr.md)
-- [Español [es]](https://github.com/SuperMonster003/AutoJs6-TypeScript-Declarations/blob/main/.changelog/CHANGELOG-es.md)
-- [日本語 [ja]](https://github.com/SuperMonster003/AutoJs6-TypeScript-Declarations/blob/main/.changelog/CHANGELOG-ja.md)
-- [한국어 [ko]](https://github.com/SuperMonster003/AutoJs6-TypeScript-Declarations/blob/main/.changelog/CHANGELOG-ko.md)
-- [Русский [ru]](https://github.com/SuperMonster003/AutoJs6-TypeScript-Declarations/blob/main/.changelog/CHANGELOG-ru.md)
+- [简体中文 [zh-Hans]](https://github.com/suminwell/CeenJs6-TypeScript-Declarations/blob/ceen/.changelog/CHANGELOG-zh-Hans.md)
+- [繁體中文 (香港) [zh-Hant-HK]](https://github.com/suminwell/CeenJs6-TypeScript-Declarations/blob/ceen/.changelog/CHANGELOG-zh-Hant-HK.md)
+- [繁體中文 (台灣) [zh-Hant-TW]](https://github.com/suminwell/CeenJs6-TypeScript-Declarations/blob/ceen/.changelog/CHANGELOG-zh-Hant-TW.md)
+- [English [en]](https://github.com/suminwell/CeenJs6-TypeScript-Declarations/blob/ceen/.changelog/CHANGELOG-en.md)
+- [Français [fr]](https://github.com/suminwell/CeenJs6-TypeScript-Declarations/blob/ceen/.changelog/CHANGELOG-fr.md)
+- [Español [es]](https://github.com/suminwell/CeenJs6-TypeScript-Declarations/blob/ceen/.changelog/CHANGELOG-es.md)
+- [日本語 [ja]](https://github.com/suminwell/CeenJs6-TypeScript-Declarations/blob/ceen/.changelog/CHANGELOG-ja.md)
+- [한국어 [ko]](https://github.com/suminwell/CeenJs6-TypeScript-Declarations/blob/ceen/.changelog/CHANGELOG-ko.md)
+- [Русский [ru]](https://github.com/suminwell/CeenJs6-TypeScript-Declarations/blob/ceen/.changelog/CHANGELOG-ru.md)
 - العربية [ar] # الحالية
+
+# v5.0.0
+
+###### 2026/10/19
+
+##### أول تكييف مع CeenJs6
+
+* `ميزة` نقل مسارات التعريفات و ceenjs/$ceenjs/app.ceenjs وحزم Java والموارد وأسماء TSX; تسمية حزمة npm باسم ceenjs6
+* `ملاحظة` الاحتفاظ بكامل الواجهات الأحدث وتوثيق متطلبات CeenJs6 6.7.0 والإضافات; إصلاح التحميل الاختياري لـ JSOX
+* `تحسين` إضافة فحوص الأنواع والوثائق وملفات npm/ZIP القابلة للتحقق وإصدارات GitHub التلقائية والنشر الاختياري إلى npm
 
 # v4.42.0
 

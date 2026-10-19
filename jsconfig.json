@@ -1,19 +1,24 @@
 {
   "compilerOptions": {
-    "target": "ES6",
+    "target": "ES2020",
     "module": "CommonJS",
     "lib": [
-      "ES5",
-      "ES6"
+      "ES2020"
     ],
     "typeRoots": [
-      "./node_modules/@sm003/autojs6-dts/declarations",
+      "./node_modules/ceenjs6/declarations",
       "./declarations"
-    ]
+    ],
+    "types": [
+      "ceenjs6"
+    ],
+    "skipLibCheck": true
   },
   "exclude": [
     "node_modules",
     ".bak",
-    ".test"
+    ".test",
+    "**/cj6-jsox-extensions.d.ts",
+    "**/cj6-jsox-*-extensions.d.ts"
   ]
 }

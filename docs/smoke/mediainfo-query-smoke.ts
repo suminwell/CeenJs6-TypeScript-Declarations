@@ -1,4 +1,4 @@
-/// <reference path="../../declarations/autojs6/index.d.ts" />
+/// <reference path="../../declarations/ceenjs6/index.d.ts" />
 
 // Public query signatures, including the existing stream accessor.
 let mediaPath = '/sdcard/Movies/two-audio.mka';

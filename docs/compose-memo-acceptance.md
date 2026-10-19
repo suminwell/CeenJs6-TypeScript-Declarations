@@ -4,7 +4,7 @@ Date: 2026-10-08. Package 4.36.0 adds `compose.memo` and `ComposeMemoOptions` to
 committed 4.35.0 source at `de51858b59ec88f75c56d94bcf4af600c54ff34f`. This describes
 local development acceptance, not npm publication.
 
-The host implementation is AutoJs6 6.8.0 / 5323, spike branch commit
+The host implementation is CeenJs6 6.8.0 / 5323, spike branch commit
 `1adc2b8639`. `memo(build, deps, options?)` returns the node type produced by `build`.
 `deps` is a readonly array of any values; `options.key` accepts a string, a number or
 null. The renderer contract, component catalog and JSX projection are unchanged.

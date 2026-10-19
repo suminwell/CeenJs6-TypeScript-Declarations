@@ -18,7 +18,7 @@ spec.loader.exec_module(markdown)
 
 class DocumentationTest(unittest.TestCase):
     def setUp(self):
-        temporary = tempfile.TemporaryDirectory(prefix="autojs6-localized-docs-")
+        temporary = tempfile.TemporaryDirectory(prefix="ceenjs6-localized-docs-")
         self.addCleanup(temporary.cleanup)
         self.root = Path(temporary.name)
         for directory in (".readme", ".changelog"):

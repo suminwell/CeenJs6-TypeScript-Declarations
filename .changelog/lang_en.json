@@ -18,6 +18,26 @@
     "adjustment": "Adjustment"
   },
   "$data": {
+    "v5.0.0": {
+      "released_date": "2026/10/19",
+      "entries": [
+        {
+          "heading": "First CeenJs6 adaptation"
+        },
+        {
+          "category": "feature",
+          "text": "Migrate declaration paths, ceenjs/$ceenjs/app.ceenjs, Java packages, resources and TSX names; rename the npm package to ceenjs6"
+        },
+        {
+          "category": "hint",
+          "text": "Retain the complete newer API surface and document host/plugin requirements for the current CeenJs6 6.7.0 runtime; fix opt-in JSOX loading"
+        },
+        {
+          "category": "improvement",
+          "text": "Add type/documentation checks, verifiable npm/ZIP artifacts, automatic GitHub Releases and optional npm publishing"
+        }
+      ]
+    },
     "v4.42.0": {
       "released_date": "2026/10/16",
       "entries": [

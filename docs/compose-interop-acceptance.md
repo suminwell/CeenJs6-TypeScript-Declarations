@@ -1,6 +1,6 @@
 # Compose interop declaration acceptance
 
-Date: 2026-10-07. Declaration package 4.33.0 adds F2 for the matching AutoJs6
+Date: 2026-10-07. Declaration package 4.33.0 adds F2 for the matching CeenJs6
 6.8.0/build 5320 host and a Compose UI renderer with the AndroidView interop
 extension. This task prepares local declarations; it does not publish an npm
 package or push a repository.
@@ -25,7 +25,7 @@ ordinary children or named slots for AndroidView.
 The normal `aj6dts -Publish` workflow completed against the committed host
 `d54f21b1ea408dfcb66e58f663d71d2f10fade8a`, using Android d.ts Generator 4.0.0
 at `525bebdaa157087b1295d80cef0dae861152eda5`, appDebug and the ace profile.
-The ignored `declarations/.generated/autojs6-dts-appDebug-ace.json` records that
+The ignored `declarations/.generated/ceenjs6-dts-appDebug-ace.json` records that
 exact host commit and successful TypeScript validation. Its schema records a
 commit but has no dirty-state field; the source checkout was independently
 checked at that commit with an empty Git status. Machine paths and temporary

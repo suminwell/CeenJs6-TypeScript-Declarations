@@ -14,7 +14,7 @@ for (let i = 0; i < requested.length; i += 2) {
 }
 if (!paths.length) paths.push(require.resolve('typescript'));
 
-const index = resolve(root, 'declarations/autojs6/index.d.ts');
+const index = resolve(root, 'declarations/ceenjs6/index.d.ts');
 const reports = [];
 for (const compiler of paths) {
     const ts = require(compiler);
@@ -29,7 +29,7 @@ for (const compiler of paths) {
     }).join('\n');
     // Separate programs are essential: an opt-in declaration must not affect the default fixture.
     const fixtureReports = [];
-    for (const fixture of ['api-coverage-smoke.ts', 'jsox-extensions-smoke.ts']) {
+    for (const fixture of ['api-coverage-smoke.ts', 'jsox-extensions-smoke.ts', 'ceenjs-smoke.ts']) {
         const program = ts.createProgram([index, resolve(root, 'docs/smoke', fixture)], options);
         const diagnostics = ts.getPreEmitDiagnostics(program);
         assert.equal(diagnostics.length, 0, describe(diagnostics));
@@ -37,7 +37,7 @@ for (const compiler of paths) {
     }
     const bodyProgram = ts.createProgram([index], { ...options, strict: false, skipLibCheck: false });
     let bodyCount = 0;
-    for (const source of bodyProgram.getSourceFiles().filter(file => /[/\\]aj6-int-[^/\\]+\.d\.ts$/.test(file.fileName))) {
+    for (const source of bodyProgram.getSourceFiles().filter(file => /[/\\]cj6-int-[^/\\]+\.d\.ts$/.test(file.fileName))) {
         const diagnostics = bodyProgram.getSemanticDiagnostics(source);
         assert.equal(diagnostics.length, 0, describe(diagnostics));
         bodyCount++;
@@ -83,7 +83,7 @@ for (const compiler of paths) {
         const read = host.readFile.bind(host), exists = host.fileExists.bind(host);
         host.readFile = file => resolve(file) === probe ? statements[module] : read(file);
         host.fileExists = file => resolve(file) === probe || exists(file);
-        const declaration = resolve(root, `declarations/autojs6/aj6-jsox-${module}-extensions.d.ts`);
+        const declaration = resolve(root, `declarations/ceenjs6/cj6-jsox-${module}-extensions.d.ts`);
         const program = ts.createProgram([index, declaration, probe], options, host);
         const diagnostics = ts.getPreEmitDiagnostics(program);
         assert.equal(diagnostics.length, 0, describe(diagnostics));

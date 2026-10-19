@@ -18,6 +18,26 @@
     "adjustment": "조정"
   },
   "$data": {
+    "v5.0.0": {
+      "released_date": "2026/10/19",
+      "entries": [
+        {
+          "heading": "CeenJs6 최초 지원"
+        },
+        {
+          "category": "feature",
+          "text": "선언 경로, ceenjs/$ceenjs/app.ceenjs, Java 패키지, 리소스 및 TSX 이름을 이전하고 npm 패키지를 ceenjs6로 변경"
+        },
+        {
+          "category": "hint",
+          "text": "최신 API 전체 선언을 유지하고 CeenJs6 6.7.0 및 플러그인 요구 사항을 설명하며 JSOX 선택적 로드를 수정"
+        },
+        {
+          "category": "improvement",
+          "text": "타입 및 문서 검사, 검증 가능한 npm/ZIP 파일, 자동 GitHub Release 및 선택적 npm 배포를 추가"
+        }
+      ]
+    },
     "v4.42.0": {
       "released_date": "2026/10/16",
       "entries": [

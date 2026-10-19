@@ -1,4 +1,4 @@
-/// <reference path="../../declarations/autojs6/index.d.ts" />
+/// <reference path="../../declarations/ceenjs6/index.d.ts" />
 
 // Run with tsc --noEmit --strictNullChecks --skipLibCheck --target ES2020 --lib ES2020.
 
@@ -69,7 +69,7 @@ let result: Internal.Mail.SendResult = inlineClient.send({
     text: 'plain',
     html: '<p>html</p><img src="cid:logo">',
     attachments: ['/sdcard/Download/report.pdf', { path: './logo.png', contentId: 'logo', inline: true }],
-    headers: { 'X-Auto-Reply': 'AutoJs6' },
+    headers: { 'X-Auto-Reply': 'CeenJs6' },
     priority: 'high',
 }, { saveToSent: false });
 let sentCopy: 'server' | 'appended' | 'failed' | 'none' = result.sentCopy;

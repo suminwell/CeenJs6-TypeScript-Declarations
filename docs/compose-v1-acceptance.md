@@ -1,6 +1,6 @@
 # Compose UI V1 declaration acceptance
 
-Date: 2026-10-03. Declaration package4.30.0 targets the matching local AutoJs6
+Date: 2026-10-03. Declaration package4.30.0 targets the matching local CeenJs6
 6.8.0 / 5317 integration and Compose UI1.0.0. The published host input commit is
 d29eb477822c566b84b6ede02edef8477bdd4085; the generator is
 525bebdaa157087b1295d80cef0dae861152eda5 (Android d.ts Generator4.0.0).

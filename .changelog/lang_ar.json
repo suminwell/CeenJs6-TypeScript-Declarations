@@ -18,6 +18,26 @@
     "adjustment": "تعديل"
   },
   "$data": {
+    "v5.0.0": {
+      "released_date": "2026/10/19",
+      "entries": [
+        {
+          "heading": "أول تكييف مع CeenJs6"
+        },
+        {
+          "category": "feature",
+          "text": "نقل مسارات التعريفات و ceenjs/$ceenjs/app.ceenjs وحزم Java والموارد وأسماء TSX; تسمية حزمة npm باسم ceenjs6"
+        },
+        {
+          "category": "hint",
+          "text": "الاحتفاظ بكامل الواجهات الأحدث وتوثيق متطلبات CeenJs6 6.7.0 والإضافات; إصلاح التحميل الاختياري لـ JSOX"
+        },
+        {
+          "category": "improvement",
+          "text": "إضافة فحوص الأنواع والوثائق وملفات npm/ZIP القابلة للتحقق وإصدارات GitHub التلقائية والنشر الاختياري إلى npm"
+        }
+      ]
+    },
     "v4.42.0": {
       "released_date": "2026/10/16",
       "entries": [

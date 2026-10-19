@@ -18,6 +18,26 @@
     "adjustment": "調整"
   },
   "$data": {
+    "v5.0.0": {
+      "released_date": "2026/10/19",
+      "entries": [
+        {
+          "heading": "CeenJs6 首次適配"
+        },
+        {
+          "category": "feature",
+          "text": "遷移聲明目錄, ceenjs/$ceenjs/app.ceenjs, Java 套件, 資源及 TSX 名稱; npm 套件改為 ceenjs6"
+        },
+        {
+          "category": "hint",
+          "text": "保留完整新版接口並說明目前 CeenJs6 6.7.0 的宿主與插件要求; 修正 JSOX 按需載入設定"
+        },
+        {
+          "category": "improvement",
+          "text": "新增類型與文件校驗, 可驗證的 npm/ZIP 產物, 自動 GitHub Release 與可選 npm 發佈"
+        }
+      ]
+    },
     "v4.42.0": {
       "released_date": "2026/10/16",
       "entries": [

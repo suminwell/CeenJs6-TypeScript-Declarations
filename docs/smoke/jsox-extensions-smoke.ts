@@ -1,4 +1,4 @@
-/// <reference path="../../declarations/autojs6/aj6-jsox-extensions.d.ts" />
+/// <reference path="../../declarations/ceenjs6/cj6-jsox-extensions.d.ts" />
 
 jsox.extendAll();
 const distinctNumbers: number[] = [1, 2, 2].distinct();

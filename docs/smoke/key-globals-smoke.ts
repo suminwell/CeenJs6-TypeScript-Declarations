@@ -1,4 +1,4 @@
-// Type-only smoke sample for key AutoJs6 globals.
+// Type-only smoke sample for key CeenJs6 globals.
 // Compile with the ROADMAP Phase 7 command; this file is not a runtime script.
 
 const colorInt: number = colors.rgb(255, 128, 0);
@@ -20,11 +20,11 @@ const sdk: number | null = sysprops.getInt('ro.build.version.sdk', 0);
 const idDefault: string = nanoid();
 const idSized: string = nanoid(16);
 
-const pinyinText: string = pinyin4j.of('AutoJs6', {
+const pinyinText: string = pinyin4j.of('CeenJs6', {
     separator: ' ',
     tone: 'WITHOUT_TONE',
 });
-const pinyinAlias: string = pinyin4j.as('AutoJs6');
+const pinyinAlias: string = pinyin4j.as('CeenJs6');
 const pinyinReadings: Pinyin4j.Matrix = pinyin4j.readings('重A𠀀', {
     system: 'HANYU',
     tone: 'WITH_TONE_NUMBER',

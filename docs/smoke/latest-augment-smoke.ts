@@ -1,12 +1,12 @@
-// Type-only smoke sample for the latest AutoJs6 augment APIs.
+// Type-only smoke sample for the latest CeenJs6 augment APIs.
 
 let aiText: Promise<string> = ai('Summarize this text.');
 let threeStoneAiPlugin: Internal.Ai.PluginSelection = {
     component: {
-        packageName: 'io.github.supermonster003.autojs6.plugin.threestoneai',
-        className: 'io.github.supermonster003.autojs6.plugin.threestoneai.provider.ThreeStoneAiProviderService',
+        packageName: 'io.github.supermonster003.ceenjs6.plugin.threestoneai',
+        className: 'io.github.supermonster003.ceenjs6.plugin.threestoneai.provider.ThreeStoneAiProviderService',
     },
-    providerId: 'autojs6.three-stone-ai',
+    providerId: 'ceenjs6.three-stone-ai',
 };
 let officialAiPlugin: Internal.Ai.PluginSelector = true;
 let localTarget: Internal.Ai.TargetId = 'local:litertlm.0123456789abcdef0123456789abcdef';
@@ -214,7 +214,7 @@ let resized: ImageWrapper = images.resize('/sdcard/image.png', [720, 1280], 'INT
 let square: ImageWrapper = images.resize(resized, [512], 'nearest-exact');
 let flipped: ImageWrapper = images.flip(square, 'horizontal');
 let yoloDetector: Internal.Yolo.Detector = yolo.load('/sdcard/models/yolo11n', {
-    component: 'io.github.supermonster003.autojs6.plugin.yolo.ncnn/.provider.YoloProviderService',
+    component: 'io.github.supermonster003.ceenjs6.plugin.yolo.ncnn/.provider.YoloProviderService',
     device: 'cpu',
     threads: 4,
     decoderId: 'ultralytics-detect',
@@ -259,9 +259,9 @@ if (presetApp) {
     app.launch(presetApp);
     launch(presetApp);
 }
-let mixedCaseConversion: string = opencc('AutoJs6', 'S2t');
-let rotation: number = autojs.rotation;
-let orientation: number = autojs.orientation;
+let mixedCaseConversion: string = opencc('CeenJs6', 'S2t');
+let rotation: number = ceenjs.rotation;
+let orientation: number = ceenjs.orientation;
 let appNameResource: number = R.string.app_name;
 let multiChoiceResult: number[] | null = dialogs.multiChoice(
     'Title',

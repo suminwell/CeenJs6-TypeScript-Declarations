@@ -18,6 +18,26 @@
     "adjustment": "調整"
   },
   "$data": {
+    "v5.0.0": {
+      "released_date": "2026/10/19",
+      "entries": [
+        {
+          "heading": "CeenJs6 初回対応"
+        },
+        {
+          "category": "feature",
+          "text": "宣言パス, ceenjs/$ceenjs/app.ceenjs, Java パッケージ, リソースと TSX 名を移行し, npm パッケージを ceenjs6 に変更"
+        },
+        {
+          "category": "hint",
+          "text": "新しい API の完全な宣言を保持し, CeenJs6 6.7.0 とプラグインの要件を説明. JSOX の任意読み込みを修正"
+        },
+        {
+          "category": "improvement",
+          "text": "型と文書の検証, 検証可能な npm/ZIP 成果物, 自動 GitHub Release と任意の npm 公開を追加"
+        }
+      ]
+    },
     "v4.42.0": {
       "released_date": "2026/10/16",
       "entries": [

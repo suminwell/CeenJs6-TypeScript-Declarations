@@ -1,5 +1,5 @@
 // Type-only checks for optional steps, bounded loops and stable collections.
-/// <reference path="../../declarations/autojs6/index.d.ts" />
+/// <reference path="../../declarations/ceenjs6/index.d.ts" />
 
 let preserved: Flow<string> = flow.of('input').whenPresent('Optional dialog', node =>
     flow.of(node).sleep(10), { timeout: 400 });

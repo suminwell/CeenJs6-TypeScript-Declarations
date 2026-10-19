@@ -1,58 +1,75 @@
 {
-  "name": "@sm003/autojs6-dts",
-  "version": "4.42.0",
-  "types": "declarations/autojs6/index.d.ts",
+  "name": "ceenjs6",
+  "version": "5.0.0",
+  "types": "declarations/ceenjs6/index.d.ts",
   "files": [
     "declarations/android.d.ts",
     "declarations/libraries.d.ts",
     "declarations/android",
-    "declarations/autojs6/index.d.ts",
-    "declarations/autojs6/aj6-declarations.d.ts",
-    "declarations/autojs6/aj6-int-*.d.ts",
-    "declarations/autojs6/aj6-jsox-*.d.ts",
-    "declarations/autojs6/aj6-jsx-element-extension.d.ts",
-    "declarations/autojs6/aj6-main-app.d.ts",
-    "declarations/autojs6/aj6-resources.d.ts",
+    "declarations/ceenjs6/index.d.ts",
+    "declarations/ceenjs6/cj6-declarations.d.ts",
+    "declarations/ceenjs6/cj6-int-*.d.ts",
+    "declarations/ceenjs6/cj6-jsox-*.d.ts",
+    "declarations/ceenjs6/cj6-jsx-element-extension.d.ts",
+    "declarations/ceenjs6/cj6-main-app.d.ts",
+    "declarations/ceenjs6/cj6-resources.d.ts",
     "docs/CHANGELOG.md",
     "jsconfig.json",
     "README.md",
     "LICENSE",
     ".readme/README-*.md",
-    ".changelog/CHANGELOG-*.md"
+    ".changelog/CHANGELOG-*.md",
+    "NOTICE",
+    "docs/COMPATIBILITY.md",
+    "docs/RELEASING.md"
   ],
   "scripts": {
-    "test": "node tools/verify-api-coverage.mjs",
-    "prepack": "",
+    "test": "npm run test:api && npm run test:compose && npm run test:colors && npm run test:terminal && npm run test:consumer",
+    "test:api": "node tools/verify-api-coverage.mjs",
+    "test:compose": "node tools/verify-compose-tsx.mjs --typescript node_modules/typescript/lib/typescript.js",
+    "test:colors": "node tools/verify-colors.mjs node_modules/typescript/lib/typescript.js",
+    "test:terminal": "node tools/verify-terminal.mjs node_modules/typescript/lib/typescript.js",
+    "test:consumer": "node tools/verify-consumer.mjs",
+    "prepack": "npm run docs:check",
+    "release:prepare": "python tools/prepare-release.py",
     "docs:generate": "python .python/generate_markdown.py",
     "docs:check": "python .python/generate_markdown.py --check",
-    "docs:test": "python -m unittest discover -s .python/tests",
-    "test:api": "node tools/verify-api-coverage.mjs"
+    "docs:test": "python -m unittest discover -s .python/tests"
   },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "description": "TypeScript Declarations for AutoJs6",
+  "description": "TypeScript declarations for CeenJs6 Android automation",
   "keywords": [
-    "autojs",
-    "autojs6",
+    "ceenjs",
+    "ceenjs6",
+    "android",
+    "automation",
+    "typescript",
     "declarations"
   ],
-  "homepage": "http://autojs6.com",
+  "homepage": "https://github.com/suminwell/CeenJs6-TypeScript-Declarations",
   "license": "MPL-2.0",
   "author": {
-    "name": "SuperMonster003",
-    "url": "https://github.com/SuperMonster003/"
+    "name": "suminwell",
+    "url": "https://github.com/suminwell"
   },
   "main": "",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SuperMonster003/AutoJs6-TypeScript-Declarations.git"
+    "url": "git+https://github.com/suminwell/CeenJs6-TypeScript-Declarations.git"
   },
   "bugs": {
-    "url": "https://github.com/SuperMonster003/AutoJs6-TypeScript-Declarations/issues"
+    "url": "https://github.com/suminwell/CeenJs6-TypeScript-Declarations/issues"
   },
   "devDependencies": {
     "typescript": "5.1.3"
-  }
+  },
+  "contributors": [
+    {
+      "name": "SuperMonster003",
+      "url": "https://github.com/SuperMonster003"
+    }
+  ]
 }

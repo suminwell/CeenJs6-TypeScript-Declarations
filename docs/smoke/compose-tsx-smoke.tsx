@@ -1,6 +1,6 @@
-/// <reference path="../../declarations/autojs6/index.d.ts" />
-/** @jsx __autojs6Tsx */
-/** @jsxFrag __autojs6TsxFragment */
+/// <reference path="../../declarations/ceenjs6/index.d.ts" />
+/** @jsx __ceenjs6Tsx */
+/** @jsxFrag __ceenjs6TsxFragment */
 
 // Compile-only positive/negative corpus for the matching F.1 host. Do not execute this file:
 // Negative directives and explicitly documented global JSX expression limits are intentional.

@@ -1,4 +1,4 @@
-/// <reference path="../../declarations/autojs6/index.d.ts" />
+/// <reference path="../../declarations/ceenjs6/index.d.ts" />
 
 let agentContext: Internal.Ai.AgentExecutionContext | null = ai.agent.context();
 if (agentContext) {

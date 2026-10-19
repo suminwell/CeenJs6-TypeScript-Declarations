@@ -1,4 +1,4 @@
-/// <reference path="../../declarations/autojs6/index.d.ts" />
+/// <reference path="../../declarations/ceenjs6/index.d.ts" />
 
 // tsc --noEmit --strict --exactOptionalPropertyTypes --skipLibCheck --target ES2020 --lib ES2020 docs/smoke/compose-nullish-exact-smoke.ts
 // exactOptionalPropertyTypes distinguishes an absent optional key from an explicitly present undefined.

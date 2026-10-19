@@ -1,7 +1,7 @@
 # Compose TSX declaration acceptance
 
 Date: 2026-10-04. Declaration package 4.31.0 adds the F.1 JSX declarations for
-the matching local AutoJs6 build 5319, Compose UI 1.1.0 and Rhino TypeScript
+the matching local CeenJs6 build 5319, Compose UI 1.1.0 and Rhino TypeScript
 execution profile. These are local integration results, not an npm or Git release.
 
 The required local `aj6dts.bat -Publish` workflow used the dedicated host source
@@ -20,12 +20,12 @@ have an intrinsic entry; Snackbar remains a session command. The P6 ordinary
 factory, child, slot, event and callback receiver declarations are unchanged.
 No props or child types were replaced with `any` to admit JSX.
 
-The separate generated region in `aj6-jsx-element-extension.d.ts` uses these
+The separate generated region in `cj6-jsx-element-extension.d.ts` uses these
 markers:
 
 ```text
-// <autojs6-compose-jsx:v1>
-// </autojs6-compose-jsx:v1>
+// <ceenjs6-compose-jsx:v1>
+// </ceenjs6-compose-jsx:v1>
 ```
 
 The host catalog tool produces this region from the frozen component catalog,
@@ -62,10 +62,10 @@ native declaration internals in the complete graph, not the script fixture.
 Classic emit preserves the distinction needed by the host dispatcher:
 
 ```tsx
-<compose.Text text="Value"/>  // __autojs6Tsx(compose.Text, { text: "Value" })
-<compose:Text text="Name"/>   // __autojs6Tsx("compose:Text", { text: "Name" })
-<text text="XML"/>           // __autojs6Tsx("text", { text: "XML" })
-<><compose.Text text="One"/></> // __autojs6Tsx(__autojs6TsxFragment, null, ...)
+<compose.Text text="Value"/>  // __ceenjs6Tsx(compose.Text, { text: "Value" })
+<compose:Text text="Name"/>   // __ceenjs6Tsx("compose:Text", { text: "Name" })
+<text text="XML"/>           // __ceenjs6Tsx("text", { text: "XML" })
+<><compose.Text text="One"/></> // __ceenjs6Tsx(__ceenjs6TsxFragment, null, ...)
 ```
 
 The public package historically omitted global `JSX.Element`, giving JSX
