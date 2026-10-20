@@ -18,6 +18,15 @@
     "adjustment": "Adjustment"
   },
   "$data": {
+    "v5.0.2": {
+      "released_date": "2026/10/20",
+      "entries": [
+        {
+          "category": "fix",
+          "text": "Resolve the local tarball path for automatic npm publication so npm does not interpret it as a GitHub repository"
+        }
+      ]
+    },
     "v5.0.1": {
       "released_date": "2026/10/20",
       "entries": [

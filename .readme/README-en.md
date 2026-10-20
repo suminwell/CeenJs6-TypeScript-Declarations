@@ -172,6 +172,12 @@ The declarations are usually updated alongside new releases of [CeenJs6](https:/
 
 ## Changelog
 
+### v5.0.2
+
+###### 2026/10/20
+
+* `Fix` Resolve the local tarball path for automatic npm publication so npm does not interpret it as a GitHub repository
+
 ### v5.0.1
 
 ###### 2026/10/20
@@ -187,13 +193,6 @@ The declarations are usually updated alongside new releases of [CeenJs6](https:/
 * `Feature` Migrate declaration paths, ceenjs/$ceenjs/app.ceenjs, Java packages, resources and TSX names; rename the npm package to ceenjs6
 * `Hint` Retain the complete newer API surface and document host/plugin requirements for the current CeenJs6 6.7.0 runtime; fix opt-in JSOX loading
 * `Improvement` Add type/documentation checks, verifiable npm/ZIP artifacts, automatic GitHub Releases and optional npm publishing
-
-### v4.42.0
-
-###### 2026/10/16
-
-* `Feature` preview, presets, importPresets and their asynchronous forms, deleteHistory and clearHistory of files.batchRename, the pinyin, photo metadata and preset options and metadataMissing of plan items, covering name previews, named presets, metadata variables, Chinese to pinyin and history cleanup of the Batch Rename plugin
-* `Hint` Requires matching host 6.8.0 and the Batch Rename plugin 1.1.0
 
 [Full changelog](https://github.com/suminwell/CeenJs6-TypeScript-Declarations/blob/ceen/.changelog/CHANGELOG-en.md)
 

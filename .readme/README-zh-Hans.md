@@ -172,6 +172,12 @@ npm update ceenjs6
 
 ## 更新日志
 
+### v5.0.2
+
+###### 2026/10/20
+
+* `修复` 修正 npm 自动发布的本地压缩包路径, 避免被解析为 GitHub 仓库地址
+
 ### v5.0.1
 
 ###### 2026/10/20
@@ -187,13 +193,6 @@ npm update ceenjs6
 * `新增` 迁移声明目录, ceenjs/$ceenjs/app.ceenjs, Java 包, 资源及 TSX 名称; npm 包改为 ceenjs6
 * `提示` 保留完整新版接口并说明当前 CeenJs6 6.7.0 的宿主与插件要求; 修正 JSOX 按需加载配置
 * `优化` 新增类型与文档校验, 可验证的 npm/ZIP 产物, 自动 GitHub Release 与可选 npm 发布
-
-### v4.42.0
-
-###### 2026/10/16
-
-* `新增` files.batchRename 的 preview, presets, importPresets 及其异步形态, deleteHistory 与 clearHistory, 拼音 / 照片元数据 / 命名预设选项及方案条目的 metadataMissing, 对应 Batch Rename 插件的单名试算, 命名预设, 元数据变量, 汉字转拼音与历史清理
-* `提示` 需要配套宿主 6.8.0 与 Batch Rename 插件 1.1.0
 
 [完整更新日志](https://github.com/suminwell/CeenJs6-TypeScript-Declarations/blob/ceen/.changelog/CHANGELOG-zh-Hans.md)
 

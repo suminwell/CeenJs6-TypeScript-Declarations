@@ -172,6 +172,12 @@ npm update ceenjs6
 
 ## 변경 기록
 
+### v5.0.2
+
+###### 2026/10/20
+
+* `수정` npm 자동 게시에서 로컬 압축 파일 경로를 절대 경로로 변환하여 GitHub 저장소로 해석되는 문제를 수정
+
 ### v5.0.1
 
 ###### 2026/10/20
@@ -187,13 +193,6 @@ npm update ceenjs6
 * `기능` 선언 경로, ceenjs/$ceenjs/app.ceenjs, Java 패키지, 리소스 및 TSX 이름을 이전하고 npm 패키지를 ceenjs6로 변경
 * `안내` 최신 API 전체 선언을 유지하고 CeenJs6 6.7.0 및 플러그인 요구 사항을 설명하며 JSOX 선택적 로드를 수정
 * `개선` 타입 및 문서 검사, 검증 가능한 npm/ZIP 파일, 자동 GitHub Release 및 선택적 npm 배포를 추가
-
-### v4.42.0
-
-###### 2026/10/16
-
-* `기능` files.batchRename 의 preview, presets, importPresets 와 비동기 형태, deleteHistory 와 clearHistory, 병음 / 사진 메타데이터 / 프리셋 옵션과 계획 항목의 metadataMissing. Batch Rename 플러그인의 이름 미리 계산, 이름 있는 프리셋, 메타데이터 변수, 한자 병음 변환과 기록 삭제를 지원
-* `안내` 대응하는 호스트 6.8.0 및 Batch Rename 플러그인 1.1.0 필요
 
 [전체 변경 기록](https://github.com/suminwell/CeenJs6-TypeScript-Declarations/blob/ceen/.changelog/CHANGELOG-ko.md)
 

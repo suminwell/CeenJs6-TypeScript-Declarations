@@ -13,6 +13,12 @@
 - [Русский [ru]](https://github.com/suminwell/CeenJs6-TypeScript-Declarations/blob/ceen/.changelog/CHANGELOG-ru.md)
 - [العربية [ar]](https://github.com/suminwell/CeenJs6-TypeScript-Declarations/blob/ceen/.changelog/CHANGELOG-ar.md)
 
+# v5.0.2
+
+###### 2026/10/20
+
+* `수정` npm 자동 게시에서 로컬 압축 파일 경로를 절대 경로로 변환하여 GitHub 저장소로 해석되는 문제를 수정
+
 # v5.0.1
 
 ###### 2026/10/20

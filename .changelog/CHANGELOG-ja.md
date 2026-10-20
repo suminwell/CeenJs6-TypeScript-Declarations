@@ -13,6 +13,12 @@
 - [Русский [ru]](https://github.com/suminwell/CeenJs6-TypeScript-Declarations/blob/ceen/.changelog/CHANGELOG-ru.md)
 - [العربية [ar]](https://github.com/suminwell/CeenJs6-TypeScript-Declarations/blob/ceen/.changelog/CHANGELOG-ar.md)
 
+# v5.0.2
+
+###### 2026/10/20
+
+* `修正` npm の自動公開でローカルアーカイブのパスを絶対パスに変換し, GitHub リポジトリとして解釈される問題を修正
+
 # v5.0.1
 
 ###### 2026/10/20

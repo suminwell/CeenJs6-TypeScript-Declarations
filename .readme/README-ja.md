@@ -172,6 +172,12 @@ npm update ceenjs6
 
 ## 変更履歴
 
+### v5.0.2
+
+###### 2026/10/20
+
+* `修正` npm の自動公開でローカルアーカイブのパスを絶対パスに変換し, GitHub リポジトリとして解釈される問題を修正
+
 ### v5.0.1
 
 ###### 2026/10/20
@@ -187,13 +193,6 @@ npm update ceenjs6
 * `機能` 宣言パス, ceenjs/$ceenjs/app.ceenjs, Java パッケージ, リソースと TSX 名を移行し, npm パッケージを ceenjs6 に変更
 * `ヒント` 新しい API の完全な宣言を保持し, CeenJs6 6.7.0 とプラグインの要件を説明. JSOX の任意読み込みを修正
 * `改善` 型と文書の検証, 検証可能な npm/ZIP 成果物, 自動 GitHub Release と任意の npm 公開を追加
-
-### v4.42.0
-
-###### 2026/10/16
-
-* `機能` files.batchRename の preview, presets, importPresets とその非同期版, deleteHistory と clearHistory, ピンイン / 写真メタデータ / プリセットのオプションとプラン項目の metadataMissing. Batch Rename プラグインの名前の試算, 名前付きプリセット, メタデータ変数, 漢字のピンイン変換と履歴の消去に対応
-* `ヒント` 対応するホスト 6.8.0 と Batch Rename プラグイン 1.1.0 が必要
 
 [すべての変更履歴](https://github.com/suminwell/CeenJs6-TypeScript-Declarations/blob/ceen/.changelog/CHANGELOG-ja.md)
 

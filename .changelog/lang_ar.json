@@ -18,6 +18,15 @@
     "adjustment": "تعديل"
   },
   "$data": {
+    "v5.0.2": {
+      "released_date": "2026/10/20",
+      "entries": [
+        {
+          "category": "fix",
+          "text": "تصحيح مسار الأرشيف المحلي للنشر التلقائي على npm حتى لا يتم تفسيره كمستودع GitHub"
+        }
+      ]
+    },
     "v5.0.1": {
       "released_date": "2026/10/20",
       "entries": [

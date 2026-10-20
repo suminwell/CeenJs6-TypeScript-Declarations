@@ -18,6 +18,15 @@
     "adjustment": "調整"
   },
   "$data": {
+    "v5.0.2": {
+      "released_date": "2026/10/20",
+      "entries": [
+        {
+          "category": "fix",
+          "text": "npm の自動公開でローカルアーカイブのパスを絶対パスに変換し, GitHub リポジトリとして解釈される問題を修正"
+        }
+      ]
+    },
     "v5.0.1": {
       "released_date": "2026/10/20",
       "entries": [

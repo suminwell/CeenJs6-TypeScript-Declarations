@@ -18,6 +18,15 @@
     "adjustment": "调整"
   },
   "$data": {
+    "v5.0.2": {
+      "released_date": "2026/10/20",
+      "entries": [
+        {
+          "category": "fix",
+          "text": "修正 npm 自动发布的本地压缩包路径, 避免被解析为 GitHub 仓库地址"
+        }
+      ]
+    },
     "v5.0.1": {
       "released_date": "2026/10/20",
       "entries": [

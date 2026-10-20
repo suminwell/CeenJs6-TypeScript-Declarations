@@ -18,6 +18,15 @@
     "adjustment": "조정"
   },
   "$data": {
+    "v5.0.2": {
+      "released_date": "2026/10/20",
+      "entries": [
+        {
+          "category": "fix",
+          "text": "npm 자동 게시에서 로컬 압축 파일 경로를 절대 경로로 변환하여 GitHub 저장소로 해석되는 문제를 수정"
+        }
+      ]
+    },
     "v5.0.1": {
       "released_date": "2026/10/20",
       "entries": [

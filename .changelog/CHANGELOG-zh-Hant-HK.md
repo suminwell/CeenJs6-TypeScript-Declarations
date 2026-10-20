@@ -13,6 +13,12 @@
 - [Русский [ru]](https://github.com/suminwell/CeenJs6-TypeScript-Declarations/blob/ceen/.changelog/CHANGELOG-ru.md)
 - [العربية [ar]](https://github.com/suminwell/CeenJs6-TypeScript-Declarations/blob/ceen/.changelog/CHANGELOG-ar.md)
 
+# v5.0.2
+
+###### 2026/10/20
+
+* `修復` 修正 npm 自動發佈的本地壓縮包路徑, 避免被解析為 GitHub 儲存庫地址
+
 # v5.0.1
 
 ###### 2026/10/20

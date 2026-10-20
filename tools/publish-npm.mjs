@@ -2,12 +2,13 @@ import assert from 'node:assert/strict';
 import {spawnSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {appendFileSync, readFileSync} from 'node:fs';
+import {resolve} from 'node:path';
 
 const metadata = JSON.parse(readFileSync('dist/release-metadata.json', 'utf8'));
 assert.equal(metadata.name, 'ceenjs6');
 assert.match(metadata.version, /^\d+\.\d+\.\d+$/);
 if (process.env.RELEASE_VERSION) assert.equal(metadata.version, process.env.RELEASE_VERSION);
-const tarball = `dist/ceenjs6-${metadata.version}.tgz`;
+const tarball = resolve(`dist/ceenjs6-${metadata.version}.tgz`);
 const integrity = 'sha512-' + createHash('sha512').update(readFileSync(tarball)).digest('base64');
 assert.equal(integrity, metadata.npm_integrity, 'Tarball differs from the checked package');
 const registryUrl = `https://registry.npmjs.org/ceenjs6/${metadata.version}`;

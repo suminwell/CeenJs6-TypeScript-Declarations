@@ -85,13 +85,13 @@ npm login --auth-type=web --registry=https://registry.npmjs.org/
 ```
 
 A browser login or email login code does not necessarily authorize direct
-publication. Direct `npm publish dist/registry/ceenjs6-5.0.0.tgz --access public`
+publication. Direct `npm publish ./dist/registry/ceenjs6-5.0.0.tgz --access public`
 requires the account's publishing 2FA or a token permitted by npm's policy.
 For the initial publication, npm 11.19 also supports staging the exact tarball
 and confirming publication separately:
 
 ```shell
-npm stage publish dist/registry/ceenjs6-5.0.0.tgz --access public
+npm stage publish ./dist/registry/ceenjs6-5.0.0.tgz --access public
 npm stage view <stage-id>
 npm stage approve <stage-id>
 ```
@@ -104,6 +104,9 @@ an email login code alone does not enroll account 2FA. Then approve the existing
 stage rather than uploading another copy. Run interactive authorization
 commands in a terminal and complete npm login/2FA in the official UI; do not
 commit credentials.
+
+Use an absolute path or a `./` prefix for local tarballs; npm may interpret
+`dist/file.tgz` as GitHub shorthand rather than a local file.
 
 The npm job publishes the exact tarball already checked and attached to the
 GitHub Release, with provenance. It verifies the registry's SHA-512 integrity.

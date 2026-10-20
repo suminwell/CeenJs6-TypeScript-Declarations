@@ -13,6 +13,12 @@
 - Русский [ru] # текущий
 - [العربية [ar]](https://github.com/suminwell/CeenJs6-TypeScript-Declarations/blob/ceen/.changelog/CHANGELOG-ar.md)
 
+# v5.0.2
+
+###### 2026/10/20
+
+* `Исправление` Исправить путь к локальному архиву для автоматической публикации npm, чтобы он не воспринимался как репозиторий GitHub
+
 # v5.0.1
 
 ###### 2026/10/20

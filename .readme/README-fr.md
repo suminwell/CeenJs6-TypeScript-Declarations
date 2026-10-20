@@ -172,6 +172,12 @@ Les déclarations sont généralement mises à jour avec les nouvelles versions 
 
 ## Journal des modifications
 
+### v5.0.2
+
+###### 2026/10/20
+
+* `Correction` Corriger le chemin de l'archive locale pour la publication npm automatique afin que npm ne l'interprete pas comme un depot GitHub
+
 ### v5.0.1
 
 ###### 2026/10/20
@@ -187,13 +193,6 @@ Les déclarations sont généralement mises à jour avec les nouvelles versions 
 * `Fonctionnalité` Migrer les chemins, ceenjs/$ceenjs/app.ceenjs, les paquets Java, ressources et noms TSX; nommer le paquet npm ceenjs6
 * `Note` Conserver les nouvelles API complètes et documenter les exigences pour CeenJs6 6.7.0 et ses plugins; corriger le chargement optionnel JSOX
 * `Amélioration` Ajouter les validations, les archives npm/ZIP vérifiables, les GitHub Releases automatiques et la publication npm optionnelle
-
-### v4.42.0
-
-###### 2026/10/16
-
-* `Fonctionnalité` preview, presets, importPresets et leurs formes asynchrones, deleteHistory et clearHistory de files.batchRename, les options de pinyin, de métadonnées des photos et de préréglage et metadataMissing des éléments du plan, pour l'essai de noms, les préréglages nommés, les variables de métadonnées, la conversion en pinyin et l'effacement de l'historique du plugin Batch Rename
-* `Note` Nécessite l'hôte 6.8.0 et le plugin Batch Rename 1.1.0
 
 [Journal complet](https://github.com/suminwell/CeenJs6-TypeScript-Declarations/blob/ceen/.changelog/CHANGELOG-fr.md)
 
