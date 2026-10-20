@@ -28,11 +28,12 @@ if (existing) {
     const result = spawnSync('npm', ['publish', tarball, '--access', 'public', '--provenance'], {stdio: 'inherit'});
     assert.equal(result.status, 0, `npm publish failed: ${result.error || result.status}`);
     let published;
-    for (let attempt = 0; attempt < 5; attempt++) {
+    for (let attempt = 0; attempt < 60; attempt++) {
         published = await publishedIntegrity();
         if (published) break;
-        await new Promise(resolve => setTimeout(resolve, 2_000));
+        if (attempt < 59) await new Promise(resolve => setTimeout(resolve, 5_000));
     }
+    assert(published, 'npm accepted the publication but the version is not visible after five minutes; inspect npm processing and re-run this job at the release tag');
     assert.equal(published, integrity, 'Published registry integrity differs from the checked tarball');
 }
 if (process.env.GITHUB_STEP_SUMMARY) {
