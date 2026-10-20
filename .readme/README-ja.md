@@ -172,6 +172,12 @@ npm update ceenjs6
 
 ## 変更履歴
 
+### v5.0.1
+
+###### 2026/10/20
+
+* `改善` npm の初回公開の認証とステージング公開の手順を追記し, GitHub OIDC による公開権限と接続検証の要件を説明
+
 ### v5.0.0
 
 ###### 2026/10/19
@@ -188,13 +194,6 @@ npm update ceenjs6
 
 * `機能` files.batchRename の preview, presets, importPresets とその非同期版, deleteHistory と clearHistory, ピンイン / 写真メタデータ / プリセットのオプションとプラン項目の metadataMissing. Batch Rename プラグインの名前の試算, 名前付きプリセット, メタデータ変数, 漢字のピンイン変換と履歴の消去に対応
 * `ヒント` 対応するホスト 6.8.0 と Batch Rename プラグイン 1.1.0 が必要
-
-### v4.41.0
-
-###### 2026/10/16
-
-* `機能` plugins.tools とそのツール, プロバイダー, 呼び出しオプション, 結果の型. AutoJs6 プラグインが自ら記述するツールの一覧, 同期と非同期の呼び出し, 画像 / ファイル / ディレクトリ引数と出力ファイルに対応
-* `ヒント` 対応するホスト 6.8.0 とツールを提供するプラグインが必要
 
 [すべての変更履歴](https://github.com/suminwell/CeenJs6-TypeScript-Declarations/blob/ceen/.changelog/CHANGELOG-ja.md)
 

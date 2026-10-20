@@ -18,6 +18,15 @@
     "adjustment": "Adjustment"
   },
   "$data": {
+    "v5.0.1": {
+      "released_date": "2026/10/20",
+      "entries": [
+        {
+          "category": "improvement",
+          "text": "Document initial npm publication authorization and staged publishing, including GitHub OIDC publication permissions and connection validation"
+        }
+      ]
+    },
     "v5.0.0": {
       "released_date": "2026/10/19",
       "entries": [

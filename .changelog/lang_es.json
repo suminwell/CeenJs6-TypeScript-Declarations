@@ -18,6 +18,15 @@
     "adjustment": "Ajuste"
   },
   "$data": {
+    "v5.0.1": {
+      "released_date": "2026/10/20",
+      "entries": [
+        {
+          "category": "improvement",
+          "text": "Documentar la autorización de la primera publicación npm y la publicación por etapas, incluidos los permisos de GitHub OIDC y la validación de la conexión"
+        }
+      ]
+    },
     "v5.0.0": {
       "released_date": "2026/10/19",
       "entries": [

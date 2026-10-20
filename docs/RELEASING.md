@@ -41,7 +41,13 @@ declaration reference, rejects obsolete runtime names, verifies the ZIP and
 creates checksums. It does not publish. CI repeats all checks on the committed
 source before creating a Release.
 
-Until npm publication is configured, the checked GitHub asset is installable:
+Install the package from the official npm registry:
+
+```shell
+npm install ceenjs6
+```
+
+The checked GitHub asset is also installable independently of npm:
 
 ```shell
 npm install https://github.com/suminwell/CeenJs6-TypeScript-Declarations/releases/download/v5.0.0/ceenjs6-5.0.0.tgz
@@ -56,7 +62,12 @@ when manually running the workflow at the release commit/tag. Set up one of:
 1. **Trusted publishing (recommended).** After the package exists, configure
    its npm publishing settings for GitHub Actions, owner `suminwell`, repository
    `CeenJs6-TypeScript-Declarations`, workflow `release.yml`, with no environment
-   restriction. Set repository variables `NPM_TRUSTED_PUBLISHER=true` and
+   restriction. Enable **Allow npm publish**; staged publishing permission
+   alone does not authorize this workflow's direct publication. Complete npm's
+   security-key confirmation to save the connection. A saved connection may
+   show **Pending validation** until the first successful OIDC publication;
+   publish a new version before the deadline displayed by npm to validate it.
+   Set repository variables `NPM_TRUSTED_PUBLISHER=true` and
    `NPM_PUBLISH_ENABLED=true`. CI uses npm 11 and GitHub OIDC, with no npm token.
 2. **Granular token.** Add a publishing token authorized for `ceenjs6` as the
    `NPM_TOKEN` repository secret and set `NPM_PUBLISH_ENABLED=true`. Use a token

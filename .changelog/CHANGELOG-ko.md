@@ -13,6 +13,12 @@
 - [Русский [ru]](https://github.com/suminwell/CeenJs6-TypeScript-Declarations/blob/ceen/.changelog/CHANGELOG-ru.md)
 - [العربية [ar]](https://github.com/suminwell/CeenJs6-TypeScript-Declarations/blob/ceen/.changelog/CHANGELOG-ar.md)
 
+# v5.0.1
+
+###### 2026/10/20
+
+* `개선` 최초 npm 게시 인증과 단계별 게시 절차를 문서화하고 GitHub OIDC 게시 권한과 연결 검증 요구 사항을 설명
+
 # v5.0.0
 
 ###### 2026/10/19

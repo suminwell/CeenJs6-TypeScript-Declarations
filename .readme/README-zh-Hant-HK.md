@@ -172,6 +172,12 @@ npm update ceenjs6
 
 ## 更新日誌
 
+### v5.0.1
+
+###### 2026/10/20
+
+* `優化` 補充首次 npm 發佈授權和暫存發佈流程, 說明 GitHub OIDC 自動發佈權限與連線驗證要求
+
 ### v5.0.0
 
 ###### 2026/10/19
@@ -188,13 +194,6 @@ npm update ceenjs6
 
 * `新增` files.batchRename 的 preview, presets, importPresets 及其異步形式, deleteHistory 與 clearHistory, 拼音 / 相片中繼資料 / 命名預設選項及方案條目的 metadataMissing, 對應 Batch Rename 插件的單名試算, 命名預設, 中繼資料變數, 漢字轉拼音與歷史清理
 * `提示` 需要配套宿主 6.8.0 與 Batch Rename 插件 1.1.0
-
-### v4.41.0
-
-###### 2026/10/16
-
-* `新增` plugins.tools 及其工具, 提供者, 調用選項與結果類型, 對應 AutoJs6 插件自我描述的工具: 列出, 同步與異步調用, 圖片 / 文件 / 目錄參數與輸出文件
-* `提示` 需要配套宿主 6.8.0 及提供工具的插件
 
 [完整更新日誌](https://github.com/suminwell/CeenJs6-TypeScript-Declarations/blob/ceen/.changelog/CHANGELOG-zh-Hant-HK.md)
 

@@ -172,6 +172,12 @@ Normalmente, el proyecto de archivos de declaración se actualiza junto con las 
 
 ## Registro de cambios
 
+### v5.0.1
+
+###### 2026/10/20
+
+* `Mejora` Documentar la autorización de la primera publicación npm y la publicación por etapas, incluidos los permisos de GitHub OIDC y la validación de la conexión
+
 ### v5.0.0
 
 ###### 2026/10/19
@@ -188,13 +194,6 @@ Normalmente, el proyecto de archivos de declaración se actualiza junto con las 
 
 * `Función` preview, presets, importPresets y sus formas asíncronas, deleteHistory y clearHistory de files.batchRename, las opciones de pinyin, metadatos de fotos y ajustes predefinidos y metadataMissing de los elementos del plan, para el cálculo de nombres, los ajustes predefinidos con nombre, las variables de metadatos, la conversión a pinyin y la limpieza del historial del plugin Batch Rename
 * `Nota` Requiere el host 6.8.0 y el plugin Batch Rename 1.1.0
-
-### v4.41.0
-
-###### 2026/10/16
-
-* `Función` plugins.tools con sus tipos de herramienta, proveedor, opciones de llamada y resultado, para las herramientas que describen los propios plugins de AutoJs6: lista, llamadas síncronas y asíncronas, argumentos de imagen / archivo / directorio y archivos de salida
-* `Nota` Requiere el anfitrión 6.8.0 correspondiente y un plugin que proporcione herramientas
 
 [Registro completo](https://github.com/suminwell/CeenJs6-TypeScript-Declarations/blob/ceen/.changelog/CHANGELOG-es.md)
 

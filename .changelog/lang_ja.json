@@ -18,6 +18,15 @@
     "adjustment": "調整"
   },
   "$data": {
+    "v5.0.1": {
+      "released_date": "2026/10/20",
+      "entries": [
+        {
+          "category": "improvement",
+          "text": "npm の初回公開の認証とステージング公開の手順を追記し, GitHub OIDC による公開権限と接続検証の要件を説明"
+        }
+      ]
+    },
     "v5.0.0": {
       "released_date": "2026/10/19",
       "entries": [

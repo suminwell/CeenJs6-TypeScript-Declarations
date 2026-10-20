@@ -18,6 +18,15 @@
     "adjustment": "調整"
   },
   "$data": {
+    "v5.0.1": {
+      "released_date": "2026/10/20",
+      "entries": [
+        {
+          "category": "improvement",
+          "text": "補充首次 npm 發佈授權和暫存發佈流程, 說明 GitHub OIDC 自動發佈權限與連線驗證要求"
+        }
+      ]
+    },
     "v5.0.0": {
       "released_date": "2026/10/19",
       "entries": [

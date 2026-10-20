@@ -172,6 +172,12 @@ The declarations are usually updated alongside new releases of [CeenJs6](https:/
 
 ## Changelog
 
+### v5.0.1
+
+###### 2026/10/20
+
+* `Improvement` Document initial npm publication authorization and staged publishing, including GitHub OIDC publication permissions and connection validation
+
 ### v5.0.0
 
 ###### 2026/10/19
@@ -188,13 +194,6 @@ The declarations are usually updated alongside new releases of [CeenJs6](https:/
 
 * `Feature` preview, presets, importPresets and their asynchronous forms, deleteHistory and clearHistory of files.batchRename, the pinyin, photo metadata and preset options and metadataMissing of plan items, covering name previews, named presets, metadata variables, Chinese to pinyin and history cleanup of the Batch Rename plugin
 * `Hint` Requires matching host 6.8.0 and the Batch Rename plugin 1.1.0
-
-### v4.41.0
-
-###### 2026/10/16
-
-* `Feature` plugins.tools with its tool, provider, call option and result types, covering the tools AutoJs6 plugins describe themselves: listing, synchronous and asynchronous calls, image / file / directory arguments and output files
-* `Hint` Requires matching host 6.8.0 and a plugin that provides tools
 
 [Full changelog](https://github.com/suminwell/CeenJs6-TypeScript-Declarations/blob/ceen/.changelog/CHANGELOG-en.md)
 

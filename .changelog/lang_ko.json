@@ -18,6 +18,15 @@
     "adjustment": "조정"
   },
   "$data": {
+    "v5.0.1": {
+      "released_date": "2026/10/20",
+      "entries": [
+        {
+          "category": "improvement",
+          "text": "최초 npm 게시 인증과 단계별 게시 절차를 문서화하고 GitHub OIDC 게시 권한과 연결 검증 요구 사항을 설명"
+        }
+      ]
+    },
     "v5.0.0": {
       "released_date": "2026/10/19",
       "entries": [

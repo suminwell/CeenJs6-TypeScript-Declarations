@@ -13,6 +13,12 @@
 - [Русский [ru]](https://github.com/suminwell/CeenJs6-TypeScript-Declarations/blob/ceen/.changelog/CHANGELOG-ru.md)
 - [العربية [ar]](https://github.com/suminwell/CeenJs6-TypeScript-Declarations/blob/ceen/.changelog/CHANGELOG-ar.md)
 
+# v5.0.1
+
+###### 2026/10/20
+
+* `优化` 补充首次 npm 发布授权和暂存发布流程, 说明 GitHub OIDC 自动发布权限与连接验证要求
+
 # v5.0.0
 
 ###### 2026/10/19
